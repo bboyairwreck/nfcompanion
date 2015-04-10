@@ -3,7 +3,8 @@ $(document).ready(function() {
 });
 
 
-function myFunction() {
-    $('h1').text("Index");
-}
 
+
+function myFunction() {
+    $('h1').text("List");
+}

@@ -1,9 +1,9 @@
-document.addEventListener('deviceready', onDeviceReady, false);
+$(document).ready(function() {
+    myFunction();
+});
 
-function onDeviceReady(){
-    $("h1").text("jQuery Works!");
+
+function myFunction() {
+    $('h1').text("Index");
 }
 
-function bar() {
-    console.log("Hello");
-}
