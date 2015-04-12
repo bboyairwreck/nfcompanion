@@ -3,10 +3,17 @@ $(document).ready(function() {
 });
 
 window.addEventListener('push', checkPage);
-var lastPage = "";
+var pageStack = [];
+
+function getPageName() {
+    var content = document.getElementsByClassName("content")[0];
+    var pageName = content.id;
+    return pageName;
+}
 
 function checkPage() {
-
+    pageStack.push(getPageName());
+    
     var content = document.getElementsByClassName("content")[0];
     var pageName = content.id;
 
