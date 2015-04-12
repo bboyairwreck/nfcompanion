@@ -4,8 +4,13 @@ $(document).ready(function() {
 });
 
 function greetingsFunction() {
-    $("#addTime").css("opacity", 1);
-    $("#welcomeTime").prop('disabled', false);
+    if ($("#addSound").hasClass('active')) {
+        $("#addTime").css("opacity", 1);
+        $("#welcomeTime").prop('disabled', false);
+    } else {
+        $("#addTime").css("opacity", 0.2);
+        $("#welcomeTime").prop('disabled', true);
+    }
 }
 
 function myFunction() {
