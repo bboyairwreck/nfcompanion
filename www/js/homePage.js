@@ -10,6 +10,7 @@ function greetingsFunction() {
     } else {
         $("#addTime").css("opacity", 0.2);
         $("#welcomeTime").prop('disabled', true);
+        hideKeyboard();
     }
 }
 
