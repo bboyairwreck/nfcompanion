@@ -17,6 +17,7 @@
         
         <script type="text/javascript" src="js/ratchet2.js"></script>
         <script type="text/javascript" src="js/push.js"></script>
+        <script type="text/javascript" src="js/toggles.js"></script>
         
         <script type="text/javascript" src="js/navigation.js"></script>
     </head>
@@ -42,15 +43,15 @@
                         Add Sound
                         <img src="img/icon-play-preview.png" class="playPreview" />
                         <p id="soundDesc">"Good morning Jane. Today is..."</p>
-                        <div class="toggle">
+                        <div class="toggle" id="addSound">
                             <div class="toggle-handle"></div>
                         </div>
                     </li>
-                    <li class="table-view-cell">
+                    <li class="table-view-cell" id="addTime">
                         Greeting Time
                         <label id="welcomeTimeLabel">
                             <span id="welcomeTimeString">9:00 AM</span><span class="icon icon-edit"></span>
-                            <input id="welcomeTime" type="time" value="09:00" />
+                            <input id="welcomeTime" type="time" value="09:00" disabled/>
                         </label>
                     </li>
             </div>

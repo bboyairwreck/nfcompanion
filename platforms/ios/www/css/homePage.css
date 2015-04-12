@@ -33,6 +33,10 @@
     margin-left: 5px;
 }
 
+#addTime {
+    opacity: 0.2;
+}
+
 .icon-play {
     color: #333333;
 }

@@ -1,6 +1,12 @@
 $(document).ready(function() {
     myFunction();
+    document.querySelector("#addSound").addEventListener('toggle', greetingsFunction);
 });
+
+function greetingsFunction() {
+    $("#addTime").css("opacity", 1);
+    $("#welcomeTime").prop('disabled', false);
+}
 
 function myFunction() {
     $('h1').text("Home Page");
