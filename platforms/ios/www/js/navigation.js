@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 window.addEventListener('push', checkPage);
-
+var lastPage = "";
 
 function checkPage() {
 

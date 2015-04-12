@@ -8,7 +8,7 @@ function myFunction() {
     var i = 0;
 
     $("#welcomeTime").change(function() {
-        console.log("changed");
+
         var time = $("#welcomeTime").val();
 
         var timeString;
