@@ -84,7 +84,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view from its nib. rgba(247, 247, 247, .98)
+
+    /* Change status bar color here */
+    UIView *statusBarView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 22)];
+    statusBarView.backgroundColor  =  [UIColor colorWithRed:247.0f/255.0f
+                                                      green:247.0f/255.0f
+                                                       blue:247.0f/255.0f
+                                                      alpha:0.98f];;
+    [self.view addSubview:statusBarView];
 }
 
 - (void)viewDidUnload
