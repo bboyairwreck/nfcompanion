@@ -11,50 +11,47 @@
         <!-- <link rel="stylesheet" type="text/css" href="css/common.css" /> -->
         <link rel="stylesheet" type="text/css" href="css/ratchet.css" />
         <link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.css" />
-        
+        <link rel="stylesheet" type="text/css" href="css/homePage.css" />
+
         <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-        
+
         <script type="text/javascript" src="js/ratchet2.js"></script>
         <script type="text/javascript" src="js/push.js"></script>
+        <script type="text/javascript" src="js/toggles.js"></script>
 
-        
         <script type="text/javascript" src="js/navigation.js"></script>
         <script type="text/javascript" src="js/common.js"></script>
-        
     </head>
     <body>
-        <!-- This is the navigator header -->
-        <header class="bar bar-nav">
-            <button class="btn btn-link btn-nav pull-left">
+    <!-- This is the navigator header -->
+    <header class="bar bar-nav">
+        <a href="index.html">
+            <button class="btn btn-link btn-nav pull-left backHome">
                 <span class="icon icon-left-nav"></span>
                 Back
             </button>
-            
-            <a class="icon icon-gear pull-right" href="settings.html"></a>
+        </a>
 
-            <h1 class="title">Never Forgotten</h1>
+        <h1 class="title">AJAX</h1>
+    </header>
 
-        </header>
-
-        <!-- This is were the content of your app goes -->
-        <div class="content" id="index">
+    <!-- This is were the content of your app goes -->
+    <div class="content" id="ajaxTest">
+        <div class="card">
             <ul class="table-view">
+                <li class="table-view-cell table-view-divider">AJAX</li>
                 <li class="table-view-cell">
-                    <a class="navigate-right" href="list.html" data-transition="slide-in">list.html</a>
-                </li>
-                <li class="table-view-cell">
-                    <a class="navigate-right" href="ajaxTest.html" data-transition="slide-in">ajaxTest.html</a>
+                    Click to make an AJAX call
                 </li>
             </ul>
         </div>
-        <nav class="bar-tab bar">
-            <a href="#" class="tab-item">
-                <span class="icon icon-person"></span>
-                <span class="tab-label">Profile</span>
-            </a>
-        </nav>
 
-        
+        <div class="content-padded">
+            <button id="ajaxButton" class="btn btn-primary btn-block">AJAX Call</button>
+        </div>
+    </div>
+
+
 
     </body>
 </html>

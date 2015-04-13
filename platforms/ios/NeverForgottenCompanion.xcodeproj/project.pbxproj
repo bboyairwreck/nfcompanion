@@ -10,8 +10,10 @@
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		2FA287D62147453961BFA68A /* ajaxTest.js in Sources */ = {isa = PBXBuildFile; fileRef = 2FA28BC0E3C8FE369649AE61 /* ajaxTest.js */; };
 		2FA28BB24D557717B8CA40B1 /* common.js in Sources */ = {isa = PBXBuildFile; fileRef = 2FA287BDD0300005FA394B69 /* common.js */; };
 		2FA28C27833B90A297DA3C12 /* homePage.css in Resources */ = {isa = PBXBuildFile; fileRef = 2FA28BCC648E92D961D37FCE /* homePage.css */; };
+		2FA28F0874B0B4F871CEF495 /* ajaxTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 2FA28506C353AD65B63D1167 /* ajaxTest.html */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
@@ -69,7 +71,9 @@
 		1F766FE013BBADB100FB74C0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Localizable.strings; sourceTree = "<group>"; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2FA28506C353AD65B63D1167 /* ajaxTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = ajaxTest.html; path = ../../www/ajaxTest.html; sourceTree = "<group>"; };
 		2FA287BDD0300005FA394B69 /* common.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = common.js; path = ../../www/js/common.js; sourceTree = "<group>"; };
+		2FA28BC0E3C8FE369649AE61 /* ajaxTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = ajaxTest.js; path = ../../www/js/ajaxTest.js; sourceTree = "<group>"; };
 		2FA28BCC648E92D961D37FCE /* homePage.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = homePage.css; path = ../../www/css/homePage.css; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
@@ -163,6 +167,8 @@
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				2FA28BCC648E92D961D37FCE /* homePage.css */,
 				2FA287BDD0300005FA394B69 /* common.js */,
+				2FA28506C353AD65B63D1167 /* ajaxTest.html */,
+				2FA28BC0E3C8FE369649AE61 /* ajaxTest.js */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
 				2FA28C27833B90A297DA3C12 /* homePage.css in Resources */,
+				2FA28F0874B0B4F871CEF495 /* ajaxTest.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +402,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				2FA28BB24D557717B8CA40B1 /* common.js in Sources */,
+				2FA287D62147453961BFA68A /* ajaxTest.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
