@@ -11,3 +11,19 @@ h2 {
 .content {
     padding-bottom: 50px;
 }
+
+.table-view-cell {
+    padding-right: 15px;
+}
+
+.labels {
+    width: 50%
+    /*float: left;*/
+}
+
+
+.info {
+    width: 100%;
+    /*float: right;*/
+    text-align: right;
+}
