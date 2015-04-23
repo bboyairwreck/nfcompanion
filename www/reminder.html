@@ -11,6 +11,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="css/common.css" /> -->
     <link rel="stylesheet" type="text/css" href="css/ratchet.css" />
     <link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.css" />
+    <link rel="stylesheet" type="text/css" href="css/homePage.css" />
 
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 
@@ -20,19 +21,22 @@
 
     <script type="text/javascript" src="js/navigation.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/homePage.js"></script>
 
 </head>
 <body>
 <!-- This is the navigator header -->
 <header class="bar bar-nav">
     <a href="person.html">
-        <button class="btn btn-link btn-nav pull-left backHome">
-            <span class="icon icon-left-nav"></span>
-            Jane
-        </button>
+        <button class="btn btn-negative btn-nav pull-left backHome">Cancel</button>
+
+        <!--<button class="btn btn-link btn-nav pull-left backHome">-->
+            <!--<span class="icon icon-close"></span>-->
+            <!--Cancel-->
+        <!--</button>-->
     </a>
     <a href="submit.html">
-        <button class="btn btn-link btn-nav pull-right">Done</button>
+        <button class="btn btn-positive btn-nav pull-right">Done</button>
     </a>
     <h1 class="title">Create a Reminder</h1>
 
@@ -41,6 +45,9 @@
 <!-- This is were the content of your app goes -->
 <div class="content" id="person">
     <div class="card">
+        <ul class="table-view">
+            <li class="table-view-cell table-view-divider">Reminder</li>
+        </ul>
         <form class="input-group">
             <div class="input-row">
                 <label>Name</label>
@@ -48,24 +55,28 @@
             </div>
             <div class="input-row">
                 <label>Date</label>
-                <input type="date" placeholder="April 9th, 2015">
+                <input type="date" name="reminderDate">
             </div>
             <div class="input-row">
-                <label>When</label>
-                <input type="time">
+                <label>Time</label>
+                <input type="time" value="09:00 AM" name="reminderDateTime">
             </div>
             <div class="input-row">
                 <label>Repeat</label>
-                <input type="text" placeholder="Never">
+                <input type="" placeholder="Never">
             </div>
             <div class="input-row">
                 <label>Reminder</label>
                 <input type="text" placeholder="30 min before">
             </div>
-            <div class="input-row">
-                <label>Notes</label>
-                <input type="text" placeholder="Add a note about the event">
-            </div>
+        </form>
+    </div>
+    <div class="card">
+        <ul class="table-view">
+            <li class="table-view-cell table-view-divider">Notes</li>
+        </ul>
+        <form class="input-group">
+            <textarea rows="5" placeholder="Add a note"></textarea>
         </form>
     </div>
 </div>
