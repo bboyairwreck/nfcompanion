@@ -31,9 +31,7 @@
             Accounts
         </button>
     </a>
-
     <h1 class="title">Profile</h1>
-
 </header>
 
 <!-- This is were the content of your app goes -->
@@ -42,8 +40,8 @@
     <h2 id="personName">
         <img src="img/person.png" alt="Jane" id="profilePic" />
         Jane Doe
+        <a id="editButton" class="btn" href="#editModal">Edit</a>
     </h2>
-    <button id="editButton" class="btn">Edit</button>
     <div class="card">
         <ul class="table-view">
             <li class="table-view-cell table-view-divider">General</li>
@@ -63,13 +61,13 @@
                 <div class="labels">
                     <label>Phone #</label>
                 </div>
-                <div class="info" id="phone">(425)749-1875</div>
+                <div class="info" id="phone">(425) 749-1875</div>
             </li>
             <li class="table-view-cell">
                 <div class="labels">
                     <label>Emergency Contact</label>
                 </div>
-                <div class="info" id="emergency">Mom - (425)373-4569</div>
+                <div class="info" id="emergency">Mom - (425) 373-4569</div>
             </li>
         </ul>
     </div>
@@ -98,13 +96,23 @@
                 <div class="labels">
                     <label>Allergies</label>
                 </div>
-                <div class="info" id="allergies">Nuts, Wheat</div>
+                <div class="info" id="allergies">
+                    <ul>
+                        <li>Nuts</li>
+                        <li>Wheat</li>
+                    </ul>
+                </div>
             </li>
             <li class="table-view-cell">
                 <div class="labels">
                     <label>Medications</label>
                 </div>
-                <div class="info" id="meds">30mg Ibuprofen, 100mg Sassypill</div>
+                <div class="info" id="meds">
+                    <ul>
+                        <li>30mg Ibuprofen</li>
+                        <li>100mg Sassypill</li>
+                    </ul>
+                </div>
             </li>
             <li class="table-view-cell">
                 <div class="labels">
@@ -114,33 +122,9 @@
             </li>
         </ul>
     </div>
-    <!--<div class="card">-->
-        <!--<ul class="table-view">-->
-            <!--<li class="table-view-cell table-view-divider">Layout</li>-->
-            <!--<li class="table-view-cell">-->
-                <!--Call Button-->
-                <!--<div class="toggle active" id="addCall">-->
-                    <!--<div class="toggle-handle"></div>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="table-view-cell">-->
-                <!--Create Event Button-->
-                <!--<div class="toggle active" id="addEvent">-->
-                    <!--<div class="toggle-handle"></div>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="table-view-cell">-->
-                <!--SOS Button-->
-                <!--<div class="toggle active" id="addSOS">-->
-                    <!--<div class="toggle-handle"></div>-->
-                <!--</div>-->
-            <!--</li>-->
-            <!--<li class="table-view-cell" id="previewLayout">-->
-                <!--<span id="previewLayoutText">Preview Layout</span>-->
-            <!--</li>-->
-        <!--</ul>-->
-    <!--</div>-->
 </div>
+
+<!-- This is the tab bar on the bottom -->
 <nav class="bar-tab bar">
     <a href="person.html" class="tab-item">
         <span class="icon icon-home"></span>
@@ -159,5 +143,130 @@
         <span class="tab-label">Settings</span>
     </a>
 </nav>
+
+<!-- The modal for edit profile exists here -->
+<div id="editModal" class="modal">
+    <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#editModal"></a>
+        <h1 class="title">Edit Profile</h1>
+    </header>
+    <div class="content">
+        <h2 id="personName">
+            <img src="img/person.png" alt="Jane" id="profilePic" />
+            Jane Doe
+        </h2>
+
+
+        <div class="card">
+            <ul class="table-view">
+                <li class="table-view-cell table-view-divider">General</li>
+            </ul>
+            <form class="input-group">
+                <div class="input-row">
+                    <label>Name</label>
+                    <input type="text" placeholder="Jane Doe">
+                </div>
+                <div class="input-row">
+                    <label>DOB</label>
+                    <input type="date" name="dob" />
+                </div>
+                <div class="input-row">
+                    <label>Address</label>
+                    <input type="text" name="address" />
+                </div>
+                <div class="input-row">
+                    <label>Phone #</label>
+                    <input type="tel" name="phone" />
+                </div>
+                <div class="input-row">
+                    <label>Emergency Contact</label>
+                    <input type="tel" name="emergency" />
+                </div>
+            </form>
+            <ul class="table-view">
+                <li class="table-view-cell table-view-divider">Medical Info</li>
+            </ul>
+            <form class="input-group">
+                <div class="input-row">
+                    <label>Primary Doctor</label>
+                    <input type="text" name="doctor" />
+                </div>
+                <div class="input-row">
+                    <label>Primary Hospital</label>
+                    <input type="text" name="hospital" />
+                </div>
+                <div class="input-row">
+                    <label>Blood Type</label>
+                    <input type="text" name="blood" />
+                </div>
+                <div class="input-row">
+                    <label>Allergies</label>
+                    <input type="text" name="allergies" />
+                </div>
+                <div class="input-row">
+                    <label>Medications</label>
+                    <input type="text" name="meds" />
+                </div>
+                <div class="input-row">
+                    <label>Medical Insurance</label>
+                    <input type="text" name="insurance" />
+                </div>
+            </form>
+        </div>
+        <div class="content-padded">
+            <button id="saveProfile" class="btn btn-primary btn-block">SAVE</button>
+        </div>
+
+
+
+        <!--<div class="card">-->
+            <!--<ul class="table-view">-->
+                <!--<li class="table-view-cell table-view-divider">General</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--<label>DOB</label>-->
+                    <!--<div id="birthdate"></div>-->
+                    <!--<input type="date" name="dob" />-->
+                <!--</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--<label>Address</label>-->
+                    <!--<input type="text" name="address" />-->
+                <!--</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--<label>Phone #</label>-->
+                    <!--<input type="tel" name="phone" />-->
+                <!--</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--<label>Emergency Contact</label>-->
+                    <!--<input type="tel" name="emergency" />-->
+                <!--</li>-->
+                <!--<li class="table-view-cell table-view-divider">Medical Info</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--<label>Primary Doctor</label>-->
+                    <!--<input type="text" name="doctor" />-->
+                <!--</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--<label>Primary Hospital</label>-->
+                    <!--<input type="text" name="hospital" />-->
+                <!--</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--<label>Blood Type</label>-->
+                    <!--<input type="text" name="blood" />-->
+                <!--</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--<label>Allergies</label>-->
+                    <!--<input type="text" name="allergies" />-->
+                <!--</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--<label>Medications</label>-->
+                    <!--<input type="text" name="meds" />-->
+                <!--</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--<label>Medical Insurance</label>-->
+                    <!--<input type="text" name="insurance" />-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    </div>
+</div>
 </body>
 </html>
