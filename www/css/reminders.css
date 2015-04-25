@@ -24,3 +24,7 @@
 .icon-phone2 {
 	margin-right: 10px;
 }
+
+a.card {
+    display: block;
+}
