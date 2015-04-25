@@ -22,9 +22,13 @@ function ajaxSuccess(data) {
         var evTitle = data[i]["EventTitle"];
         var evDatetime = data[i]["EventTime"];
         var evDatetimeArr = datetimeFormat(evDatetime);
+        var evDate = evDatetimeArr["date"];
+
 
         var evTime = evDatetimeArr["time"];
         var evTimeFormatted = timeFormat(evTime);
+
+        var dateFormatArr = dateFormat(evDate);
 
         // inject any thing inside of $newTask;
         $eventTitle = $newCard.find(".eventTitle");
@@ -32,6 +36,9 @@ function ajaxSuccess(data) {
 
         $eventTime = $newCard.find(".reminderTime");
         $eventTime.text(evTimeFormatted);
+
+        //  dateFormatArr["dayName"] + dateFormatArr["monthName"]
+
 
         $("#reminderList").prepend($newCard);
     }

@@ -34,3 +34,26 @@ function datetimeFormat(datetime) {
 
     return result;
 }
+
+var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var dayNames_abbrev = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+
+function dateFormat(dateString) {
+
+    var dateObj = new Date(dateString);
+
+    var year = dateObj.getYear();
+    var month = dateObj.getMonth();
+    var day = dateObj.getDate();
+    var dayOfWeek = dateObj.getDay();
+
+    var result = [];
+    result["year"] = year;
+    result["month"] = month;
+    result["monthName"] = monthNames[month];
+    result["day"] = day;
+    result["dayName"] = dayNames[dayOfWeek];
+
+    return result;
+}
