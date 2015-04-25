@@ -25,17 +25,36 @@
 <body>
 <!-- This is the navigator header -->
 <header class="bar bar-nav">
-
-
-    <a class="icon icon-gear pull-right" href="settings.html"></a>
-
+    <a href="home.html">
+        <button class="btn btn-link btn-nav pull-left backHome">
+            <span class="icon icon-left-nav"></span>
+            Home
+        </button>
+    </a>
     <h1 class="title">Calendar</h1>
-
+    <a href="createReminder.html">
+        <button class="btn btn-link btn-nav pull-right">
+            <span class="icon icon-plus"></span>
+        </button>
+    </a>
 </header>
 
 <!-- This is were the content of your app goes -->
 <div class="content" id="calendar">
-    <table style="width:100%">
+
+    <ul class="table-view">
+        <li class="table-view-divider"
+    </ul>
+    <table id="cal" style="width:100%">
+        <tr>
+            <th>S</th>
+            <th>M</th>
+            <th>T</th>
+            <th>W</th>
+            <th>T</th>
+            <th>F</th>
+            <th>S</th>
+        </tr>
         <tr>
             <td></td>
             <td>1</td>

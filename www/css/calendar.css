@@ -6,3 +6,9 @@ td {
     border: black solid 1px;
 }
 
+th {
+    width: 14%;
+    height: 10px;
+    text-align: center;
+}
+
