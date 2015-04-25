@@ -63,5 +63,4 @@ $(document).ready(function() {
         $setInsurance = $("input[name='insurance']").prop('value');
         $("#insurance").text($setInsurance);
     });
-
 });
