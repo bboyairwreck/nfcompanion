@@ -15,18 +15,24 @@ $(document).ready(function() {
 });
 
 function ajaxSuccess(data) {
-    //alert(data[0]["EventTitle"]);
+    alert(data[0]["EventTitle"]);
 
-    for (var i = 0; i < 3; i++){
+    for (var i = 0; i < data.length; i++){
         var $newCard = $("#taskTemplate .reminderCard").clone();
 
-        var evTitle = "EventTitle";
-        var evTime = "00:00 PM";
+        var evTitle = data[i]["EventTitle"];
+        var evDatetime = data[i]["EventTime"];
+        var evDatetimeArr = datetimeFormat(evDatetime);
+
+        var evTime = evDatetimeArr["time"];
+        var evTimeFormatted = timeFormat(evTime);
 
         // inject any thing inside of $newTask;
         $eventTitle = $newCard.find(".eventTitle");
-        $eventTitle.text("whatever the fuck i want");
+        $eventTitle.text(evTitle + " - " + evTime);
 
+        $eventTime = $newCard.find(".reminderTime");
+        $eventTime.text(evTimeFormatted);
 
         $("#reminderList").prepend($newCard);
     }
