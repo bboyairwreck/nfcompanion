@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.css" />
     <link rel="stylesheet" type="text/css" href="css/settingsHomePage.css" />
     <link rel="stylesheet" type="text/css" href="css/createReminder.css" />
+    <link rel="stylesheet" type="text/css" href="css/viewReminder.css" />
 
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 
@@ -28,18 +29,63 @@
 <body>
 <!-- This is the navigator header -->
 <header class="bar bar-nav">
-
+    
     <a href="home.html">
-        <button class="btn btn-positive btn-nav pull-right">Done</button>
+        <button class="btn btn-link btn-nav pull-left">
+        <span class="icon icon-left-nav"></span>
+        Back
+      </button>
     </a>
-    <h1 class="title">Create a Reminder</h1>
+
+    <button class="btn btn-link pull-right">Edit</button>
+    <h1 class="title">Reminder Details</h1>
 
 </header>
 
+
+
 <!-- This is were the content of your app goes -->
 <div class="content" id="viewReminder">
-    view remindertext
+    <div class="reminder-header">
+        <div class="date">
+            <div class="day">15</div>
+            <div class="month">APRIL</div>
+        </div>
+        <div class="reminder-name">
+            <div class="reminder-title">Take Pills</div>
+            <p>10:30 AM</p>
+        </div>
+    </div>
+
+    <br>
+
+    <ul class="table-view">
+        <li class="table-view-cell">Repeat <span class="light pull-right">Weekly</span></li>
+    </ul>
+
+    <br>
+
+    <p class="subheader">ALERTS</p>
+    <ul class="table-view">
+      <li class="table-view-cell">30 minutes before <span class="light pull-right">Only Me</span></li>
+      <li class="table-view-cell">1 hour before <span class="light pull-right">Me + Jane</span></li>
+    </ul>
+
+
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
 <nav class="bar-tab bar">
     <a href="reminders.html" class="tab-item">
         <span class="icon icon-home"></span>
