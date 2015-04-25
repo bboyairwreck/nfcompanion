@@ -32,14 +32,29 @@
         </button>
     </a>
     <h1 class="title">Calendar</h1>
-    <button class="btn btn-link btn-nav pull-right backHome">
-        <span class="icon icon-phone2"></span>
-    </button>
+    <a href="createReminder.html">
+        <button class="btn btn-link btn-nav pull-right">
+            <span class="icon icon-plus"></span>
+        </button>
+    </a>
 </header>
 
 <!-- This is were the content of your app goes -->
 <div class="content" id="calendar">
-    <table style="width:100%">
+
+    <ul class="table-view">
+        <li class="table-view-divider">February 2015</li>
+    </ul>
+    <table id="cal" style="width:100%">
+        <tr>
+            <th>S</th>
+            <th>M</th>
+            <th>T</th>
+            <th>W</th>
+            <th>T</th>
+            <th>F</th>
+            <th>S</th>
+        </tr>
         <tr>
             <td></td>
             <td>1</td>
@@ -89,5 +104,23 @@
 
 
 </div>
+<nav class="bar-tab bar">
+    <a href="reminders.html" class="tab-item">
+        <span class="icon icon-list3"></span>
+        <span class="tab-label">Reminders</span>
+    </a>
+    <a href="profile.html" class="tab-item">
+        <span class="icon icon-person"></span>
+        <span class="tab-label">Profile</span>
+    </a>
+    <a href="calendar.html" class="tab-item">
+        <span class="icon icon-calendar"></span>
+        <span class="tab-label">Calendar</span>
+    </a>
+    <a href="settings.html" class="tab-item">
+        <span class="icon icon-gear"></span>
+        <span class="tab-label">Settings</span>
+    </a>
+</nav>
 </body>
 </html>

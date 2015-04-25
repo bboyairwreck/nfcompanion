@@ -35,7 +35,9 @@ function ajaxSuccess(data) {
         $eventTitle.text(evTitle);
 
         $eventTime = $newCard.find(".reminderTime");
-        $eventTime.text(evTimeFormatted + dateFormatArr["monthName"] + dateFormatArr["dayName"]);
+        $eventTime.text(evTimeFormatted);
+
+        //  dateFormatArr["dayName"] + dateFormatArr["monthName"]
 
 
         $("#reminderList").prepend($newCard);
