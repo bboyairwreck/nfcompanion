@@ -15,8 +15,12 @@
 	font-weight: 300;
 }
 
-.table-view-divider {
+#person .table-view-divider {
 	padding: 10px;
 	color: white;
 	background-color: darkslateblue;
+}
+
+.icon-phone2 {
+	margin-right: 10px;
 }

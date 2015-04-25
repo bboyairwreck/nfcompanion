@@ -13,6 +13,7 @@
 		2FA287D62147453961BFA68A /* ajaxTest.js in Sources */ = {isa = PBXBuildFile; fileRef = 2FA28BC0E3C8FE369649AE61 /* ajaxTest.js */; };
 		2FA28BB24D557717B8CA40B1 /* common.js in Sources */ = {isa = PBXBuildFile; fileRef = 2FA287BDD0300005FA394B69 /* common.js */; };
 		2FA28C27833B90A297DA3C12 /* homePage.css in Resources */ = {isa = PBXBuildFile; fileRef = 2FA28BCC648E92D961D37FCE /* homePage.css */; };
+		2FA28E95D877064794FD9CFF /* person.js in Sources */ = {isa = PBXBuildFile; fileRef = 2FA28C9E814B98EF6520DDFF /* person.js */; };
 		2FA28F0874B0B4F871CEF495 /* ajaxTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 2FA28506C353AD65B63D1167 /* ajaxTest.html */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
@@ -75,6 +76,7 @@
 		2FA287BDD0300005FA394B69 /* common.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = common.js; path = ../../www/js/common.js; sourceTree = "<group>"; };
 		2FA28BC0E3C8FE369649AE61 /* ajaxTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = ajaxTest.js; path = ../../www/js/ajaxTest.js; sourceTree = "<group>"; };
 		2FA28BCC648E92D961D37FCE /* homePage.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = homePage.css; path = ../../www/css/homePage.css; sourceTree = "<group>"; };
+		2FA28C9E814B98EF6520DDFF /* person.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = person.js; path = ../../www/js/person.js; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				2FA287BDD0300005FA394B69 /* common.js */,
 				2FA28506C353AD65B63D1167 /* ajaxTest.html */,
 				2FA28BC0E3C8FE369649AE61 /* ajaxTest.js */,
+				2FA28C9E814B98EF6520DDFF /* person.js */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				2FA28BB24D557717B8CA40B1 /* common.js in Sources */,
 				2FA287D62147453961BFA68A /* ajaxTest.js in Sources */,
+				2FA28E95D877064794FD9CFF /* person.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
