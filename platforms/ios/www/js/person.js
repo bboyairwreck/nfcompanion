@@ -15,7 +15,6 @@ $(document).ready(function() {
 });
 
 function ajaxSuccess(data) {
-    alert(data[0]["EventTitle"]);
 
     for (var i = 0; i < data.length; i++){
         var $newCard = $("#taskTemplate .reminderCard").clone();
@@ -29,7 +28,7 @@ function ajaxSuccess(data) {
 
         // inject any thing inside of $newTask;
         $eventTitle = $newCard.find(".eventTitle");
-        $eventTitle.text(evTitle + " - " + evTime);
+        $eventTitle.text(evTitle);
 
         $eventTime = $newCard.find(".reminderTime");
         $eventTime.text(evTimeFormatted);
@@ -40,7 +39,7 @@ function ajaxSuccess(data) {
 }
 
 function ajaxError( xhr, status, errorThrown ) {
-    alert( "Sorry, there was a problem!" );
+    alert( "Sorry, there was Ajax problem!" );
     console.log( "Error: " + errorThrown );
     console.log( "Status: " + status );
     console.dir( xhr );

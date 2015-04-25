@@ -2,6 +2,8 @@
  * Created by wendykung on 4/25/15.
  */
 $(document).ready(function() {
+    // grab local variable - personID to get companionID (22)
+    //$id = localStorage.getItem("user_personID");
 
     $.ajax({
         crossDomain: true,
@@ -15,7 +17,6 @@ $(document).ready(function() {
 });
 
 function ajaxSuccess(data) {
-    alert(JSON.stringify(data));
     for (var i = 0; i < data.length; i++) {
         var $newProfile = $("#profTemp li.profileWrap").clone();
         var $name = $newProfile.find("div.profName");
@@ -25,8 +26,6 @@ function ajaxSuccess(data) {
         $name.text($patientName);
         $newProfile.attr('data-personID', $personID);
         $newProfile.attr('data-patientID', $patientID);
-        alert($newProfile.attr('data-personID'));
-        alert($newProfile.attr('data-patientID'));
         $("#profList").prepend($newProfile);
     }
 }
