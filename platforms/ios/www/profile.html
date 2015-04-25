@@ -33,26 +33,18 @@
 
 <!-- This is were the content of your app goes -->
 <div class="content" id="profile">
-    <ul class="table-view">
-        <li class="table-view-cell media">
+    <ul class="table-view" id="profList"></ul>
+
+
+    <ul id="profTemp" style="display: none;">
+        <li class="table-view-cell media profileWrap" data-personID="" data-patientID="">
             <a class="navigate-right" href="person.html" data-transition="slide-in">
                 <img class="media-object pull-left" src="http://placehold.it/42x42">
-                <div class="media-body">Jane Doe</div>
-            </a>
-        </li>
-        <li class="table-view-cell media">
-            <a class="navigate-right" href="person.html" data-transition="slide-in">
-                <img class="media-object pull-left" src="http://placehold.it/42x42">
-                <div class="media-body">Mark Thomas</div>
-            </a>
-        </li>
-        <li class="table-view-cell media">
-            <a class="navigate-right" href="person.html" data-transition="slide-in">
-                <img class="media-object pull-left" src="http://placehold.it/42x42">
-                <div class="media-body">George Li</div>
+                <div class="media-body profName">Jane Doe</div>
             </a>
         </li>
     </ul>
+
 </div>
 </body>
 </html>
