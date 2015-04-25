@@ -28,7 +28,7 @@
     <a href="profile.html">
         <button class="btn btn-link btn-nav pull-left backHome">
             <span class="icon icon-left-nav"></span>
-            Accounts
+            Home
         </button>
     </a>
     <h1 class="title">Profile</h1>
@@ -37,11 +37,11 @@
 <!-- This is were the content of your app goes -->
 <div class="content" id="personProfile">
     <!--<img src="img/person.png" alt="Jane" />-->
-    <h2 id="personName">
-        <img src="img/person.png" alt="Jane" id="profilePic" />
-        Jane Doe
+    <div class="nameTag" class="content-padded">
+        <img src="img/person.png" alt="Jane" class="profilePic" />
+        <h2 class="personName" id="main">Jane Doe</h2>
         <a id="editButton" class="btn" href="#editModal">Edit</a>
-    </h2>
+    </div>
     <div class="card">
         <ul class="table-view">
             <li class="table-view-cell table-view-divider">General</li>
@@ -49,25 +49,31 @@
                 <div class="labels">
                     <label>DOB</label>
                 </div>
-                <div class="info" id="birthdate">February 25, 1992</div>
+                <div class="info" id="birthdate">1992-02-25</div>
             </li>
             <li class="table-view-cell">
                 <div class="labels">
                     <label>Address</label>
                 </div>
-                <div class="info" id="address">816 NE 43rd St, Seattle WA</div>
+                <div class="info" id="address">816 NE 43rd St</div>
+            </li>
+            <li class="table-view-cell">
+                <div class="labels">
+                    <label>City/State</label>
+                </div>
+                <div class="info" id="citystate">Seattle, WA</div>
             </li>
             <li class="table-view-cell">
                 <div class="labels">
                     <label>Phone #</label>
                 </div>
-                <div class="info" id="phone">(425) 749-1875</div>
+                <div class="info" id="phone">425-749-1875</div>
             </li>
             <li class="table-view-cell">
                 <div class="labels">
                     <label>Emergency Contact</label>
                 </div>
-                <div class="info" id="emergency">Mom - (425) 373-4569</div>
+                <div class="info" id="emergency">425-373-4569 (Mom)</div>
             </li>
         </ul>
     </div>
@@ -96,8 +102,8 @@
                 <div class="labels">
                     <label>Allergies</label>
                 </div>
-                <div class="info" id="allergies">
-                    <ul>
+                <div class="info" >
+                    <ul id="allergies">
                         <li>Nuts</li>
                         <li>Wheat</li>
                     </ul>
@@ -107,8 +113,8 @@
                 <div class="labels">
                     <label>Medications</label>
                 </div>
-                <div class="info" id="meds">
-                    <ul>
+                <div class="info">
+                    <ul id="meds">
                         <li>30mg Ibuprofen</li>
                         <li>100mg Sassypill</li>
                     </ul>
@@ -151,11 +157,11 @@
         <h1 class="title">Edit Profile</h1>
     </header>
     <div class="content">
-        <h2 id="personName">
-            <img src="img/person.png" alt="Jane" id="profilePic" />
-            Jane Doe
-        </h2>
-
+        <div class="nameTag" class="content-padded">
+            <img src="img/person.png" alt="Jane" class="profilePic" />
+            <h2 class="personName" id="editMain"></h2>
+            <a id="submitProfile" class="btn" href="#editModal">Done</a>
+        </div>
 
         <div class="card">
             <ul class="table-view">
@@ -164,7 +170,7 @@
             <form class="input-group">
                 <div class="input-row">
                     <label>Name</label>
-                    <input type="text" placeholder="Jane Doe">
+                    <input type="text" name="name" />
                 </div>
                 <div class="input-row">
                     <label>DOB</label>
@@ -175,28 +181,34 @@
                     <input type="text" name="address" />
                 </div>
                 <div class="input-row">
+                    <label>City/State</label>
+                    <input type="text" name="citystate" />
+                </div>
+                <div class="input-row">
                     <label>Phone #</label>
                     <input type="tel" name="phone" />
                 </div>
                 <div class="input-row">
-                    <label>Emergency Contact</label>
+                    <label>Emergency</label>
                     <input type="tel" name="emergency" />
                 </div>
             </form>
+        </div>
+        <div class="card">
             <ul class="table-view">
                 <li class="table-view-cell table-view-divider">Medical Info</li>
             </ul>
             <form class="input-group">
                 <div class="input-row">
-                    <label>Primary Doctor</label>
+                    <label>Doctor</label>
                     <input type="text" name="doctor" />
                 </div>
                 <div class="input-row">
-                    <label>Primary Hospital</label>
+                    <label>Hospital</label>
                     <input type="text" name="hospital" />
                 </div>
                 <div class="input-row">
-                    <label>Blood Type</label>
+                    <label>Blood</label>
                     <input type="text" name="blood" />
                 </div>
                 <div class="input-row">
@@ -204,67 +216,17 @@
                     <input type="text" name="allergies" />
                 </div>
                 <div class="input-row">
-                    <label>Medications</label>
+                    <label>Medication</label>
                     <input type="text" name="meds" />
                 </div>
                 <div class="input-row">
-                    <label>Medical Insurance</label>
+                    <label>Insurance</label>
                     <input type="text" name="insurance" />
                 </div>
             </form>
         </div>
-        <div class="content-padded">
-            <button id="saveProfile" class="btn btn-primary btn-block">SAVE</button>
-        </div>
-
-
-
-        <!--<div class="card">-->
-            <!--<ul class="table-view">-->
-                <!--<li class="table-view-cell table-view-divider">General</li>-->
-                <!--<li class="table-view-cell">-->
-                    <!--<label>DOB</label>-->
-                    <!--<div id="birthdate"></div>-->
-                    <!--<input type="date" name="dob" />-->
-                <!--</li>-->
-                <!--<li class="table-view-cell">-->
-                    <!--<label>Address</label>-->
-                    <!--<input type="text" name="address" />-->
-                <!--</li>-->
-                <!--<li class="table-view-cell">-->
-                    <!--<label>Phone #</label>-->
-                    <!--<input type="tel" name="phone" />-->
-                <!--</li>-->
-                <!--<li class="table-view-cell">-->
-                    <!--<label>Emergency Contact</label>-->
-                    <!--<input type="tel" name="emergency" />-->
-                <!--</li>-->
-                <!--<li class="table-view-cell table-view-divider">Medical Info</li>-->
-                <!--<li class="table-view-cell">-->
-                    <!--<label>Primary Doctor</label>-->
-                    <!--<input type="text" name="doctor" />-->
-                <!--</li>-->
-                <!--<li class="table-view-cell">-->
-                    <!--<label>Primary Hospital</label>-->
-                    <!--<input type="text" name="hospital" />-->
-                <!--</li>-->
-                <!--<li class="table-view-cell">-->
-                    <!--<label>Blood Type</label>-->
-                    <!--<input type="text" name="blood" />-->
-                <!--</li>-->
-                <!--<li class="table-view-cell">-->
-                    <!--<label>Allergies</label>-->
-                    <!--<input type="text" name="allergies" />-->
-                <!--</li>-->
-                <!--<li class="table-view-cell">-->
-                    <!--<label>Medications</label>-->
-                    <!--<input type="text" name="meds" />-->
-                <!--</li>-->
-                <!--<li class="table-view-cell">-->
-                    <!--<label>Medical Insurance</label>-->
-                    <!--<input type="text" name="insurance" />-->
-                <!--</li>-->
-            <!--</ul>-->
+        <!--<div class="content-padded">-->
+            <!--<button id="saveProfile" class="btn btn-primary btn-block">SAVE</button>-->
         <!--</div>-->
     </div>
 </div>

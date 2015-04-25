@@ -1,17 +1,20 @@
-h2 {
+.nameTag {
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 20px;
     width: 100%
+    overflow: hidden;
 }
 
-#profilePic {
-    padding-right: 10px;
+.profilePic {
+    padding-right: 20px;
+    float: left;
+    width: 50px;
 }
 
 #editButton {
-    float: right;
+    /*float: right;*/
 }
 
 #personProfile {
@@ -41,3 +44,26 @@ li {
 .input-row {
     overflow: hidden;
 }
+
+label {
+    overflow: hidden;
+}
+
+.personName {
+    width: 65%;
+    float: left;
+}
+
+input {
+    color: grey;
+}
+
+/*#main {*/
+    /*float: left;*/
+/*}*/
+
+/*.centerPic {*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*float: none;*/
+/*}*/
