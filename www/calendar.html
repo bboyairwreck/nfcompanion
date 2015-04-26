@@ -42,11 +42,11 @@
 <!-- This is were the content of your app goes -->
 <div class="content" id="calendar">
 
-    <ul class="table-view">
-        <li class="table-view-divider">February 2015</li>
+    <ul class="table-view" id="calTitle">
+        <li class="table-view-divider" id="monthYear">April 2015</li>
     </ul>
     <table id="cal" style="width:100%">
-        <tr>
+        <tr class="">
             <th>S</th>
             <th>M</th>
             <th>T</th>
@@ -56,53 +56,68 @@
             <th>S</th>
         </tr>
         <tr>
-            <td></td>
+            <td class="notMonth">29</td>
+            <td class="notMonth">30</td>
+            <td class="notMonth">31</td>
             <td>1</td>
             <td>2</td>
             <td>3</td>
             <td>4</td>
-            <td>5</td>
-            <td>6</td>
         </tr>
         <tr>
-            <td></td>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
             <td>5</td>
             <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
         </tr>
         <tr>
-            <td></td>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
         </tr>
         <tr>
-            <td></td>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
         </tr>
         <tr>
-            <td></td>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
+            <td>26</td>
+            <td id="today" class="selected hasEvent">27</td>
+            <td>28</td>
+            <td class="hasEvent">29</td>
+            <td class="hasEvent">30</td>
+            <td class="notMonth">1</td>
+            <td class="notMonth">2</td>
+        </tr>
+    </table>
+    <table id="taskTable" style="width:100%">
+        <tr>
+            <td class="taskTime">9:30 AM</td>
+            <td class="taskName">Take Pills</td>
+        </tr>
+        <tr>
+            <td class="taskTime">9:30 AM</td>
+            <td class="taskName">Take Pills</td>
         </tr>
     </table>
 
-
+    <!--<div id="taskTemplate" style="display: none;">-->
+        <!--<tr>-->
+            <!--<td class="taskTime">9:30 AM</td>-->
+            <!--<td class="taskName">Take Pills</td>-->
+        <!--</tr>-->
+    <!--</div>-->
 </div>
 <nav class="bar-tab bar">
     <a href="reminders.html" class="tab-item">
