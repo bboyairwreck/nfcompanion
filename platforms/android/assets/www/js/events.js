@@ -1,24 +1,23 @@
 $(document).ready(function() {
 
-
-    $("#ajaxButton").click(function(){
+    $("#createEvent").click(function(){
         var url = "http://ericchee.com/csaTally/csaTally.php";
 
         $.ajax(url, {
             dataType : "json",
-            success : ajaxSuccess,
-            error : ajaxError
+            success : createSuccess,
+            error : createError
         });
     });
 
 });
 
-function ajaxSuccess(data) {
-    alert("Call count : " + data["count"]);
+function createSuccess(data) {
+    alert("Event Created!");
 }
 
-function ajaxError( xhr, status, errorThrown ) {
-    alert( "Sorry, there was an AJAX problem!" );
+function createError( xhr, status, errorThrown ) {
+    alert( "Sorry, there was a problem!" );
     console.log( "Error: " + errorThrown );
     console.log( "Status: " + status );
     console.dir( xhr );

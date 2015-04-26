@@ -1,0 +1,69 @@
+.nameTag {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    width: 100%
+    overflow: hidden;
+}
+
+.profilePic {
+    padding-right: 20px;
+    float: left;
+    width: 50px;
+}
+
+#editButton {
+    /*float: right;*/
+}
+
+#personProfile {
+    padding-bottom: 50px;
+}
+
+.table-view-cell {
+    padding-right: 15px;
+}
+
+.labels {
+    width: 50%
+    /*float: left;*/
+}
+
+
+.info {
+    width: 80%;
+    float: right;
+    text-align: right;
+}
+
+li {
+    list-style: none;
+}
+
+.input-row {
+    overflow: hidden;
+}
+
+label {
+    overflow: hidden;
+}
+
+.personName {
+    width: 65%;
+    float: left;
+}
+
+input {
+    color: grey;
+}
+
+/*#main {*/
+    /*float: left;*/
+/*}*/
+
+/*.centerPic {*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*float: none;*/
+/*}*/
