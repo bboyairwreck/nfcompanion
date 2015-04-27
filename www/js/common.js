@@ -43,7 +43,7 @@ function dateFormat(dateString) {
 
     var dateObj = new Date(dateString);
 
-    var year = dateObj.getYear();
+    var year = dateObj.getFullYear();
     var month = dateObj.getMonth();
     var day = dateObj.getDate();
     var dayOfWeek = dateObj.getDay();
@@ -54,6 +54,8 @@ function dateFormat(dateString) {
     result["monthName"] = monthNames[month];
     result["day"] = day;
     result["dayName"] = dayNames[dayOfWeek];
+    // dateLine ~ "April 12, 2015"
+    result["dateLine"] = monthNames[month] + " " + day + ", " + year;
 
     return result;
 }
