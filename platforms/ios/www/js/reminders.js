@@ -46,7 +46,7 @@ function ajaxSuccess(data) {
 }
 
 function ajaxError( xhr, status, errorThrown ) {
-    alert( "Sorry, there was Ajax problem!" );
+    alert( "Sorry, there was an Ajax problem!" );
     console.log( "Error: " + errorThrown );
     console.log( "Status: " + status );
     console.dir( xhr );

@@ -58,6 +58,12 @@ tr {
     /*border: black solid 1px;*/
 }
 
+.noTask {
+    width: 100%;
+    font-size: 11pt;
+    color: grey;
+}
+
 .taskTime {
     width: 14%;
     font-size: 7pt;

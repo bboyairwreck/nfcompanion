@@ -17,7 +17,6 @@
     <script type="text/javascript" src="js/ratchet2.js"></script>
     <script type="text/javascript" src="js/push.js"></script>
 
-
     <script type="text/javascript" src="js/navigation.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
 
@@ -43,7 +42,7 @@
 <div class="content" id="calendar">
 
     <ul class="table-view" id="calTitle">
-        <li class="table-view-divider" id="monthYear">April 2015</li>
+        <li class="table-view-divider" id="monthYear"></li>
     </ul>
     <table id="cal" style="width:100%">
         <tr class="">
@@ -76,24 +75,24 @@
         <tr>
             <td>12</td>
             <td>13</td>
-            <td>14</td>
+            <td class="hasEvent">14</td>
             <td>15</td>
-            <td>16</td>
-            <td>17</td>
+            <td class="hasEvent">16</td>
+            <td class="hasEvent">17</td>
             <td>18</td>
         </tr>
         <tr>
             <td>19</td>
             <td>20</td>
-            <td>21</td>
+            <td class="hasEvent">21</td>
             <td>22</td>
             <td>23</td>
             <td>24</td>
-            <td>25</td>
+            <td class="hasEvent">25</td>
         </tr>
         <tr>
-            <td>26</td>
-            <td id="today" class="selected hasEvent">27</td>
+            <td class="hasEvent">26</td>
+            <td id="today" class="selected">27</td>
             <td>28</td>
             <td class="hasEvent">29</td>
             <td class="hasEvent">30</td>
@@ -102,22 +101,14 @@
         </tr>
     </table>
     <table id="taskTable" style="width:100%">
-        <tr>
-            <td class="taskTime">9:30 AM</td>
-            <td class="taskName">Take Pills</td>
-        </tr>
-        <tr>
-            <td class="taskTime">9:30 AM</td>
-            <td class="taskName">Take Pills</td>
-        </tr>
     </table>
 
-    <!--<div id="taskTemplate" style="display: none;">-->
-        <!--<tr>-->
-            <!--<td class="taskTime">9:30 AM</td>-->
-            <!--<td class="taskName">Take Pills</td>-->
-        <!--</tr>-->
-    <!--</div>-->
+    <table id="taskTemplate" style="display: none;">
+        <tr class="taskCard">
+            <td class="taskTime"></td>
+            <td class="taskName"></td>
+        </tr>
+    </table>
 </div>
 <nav class="bar-tab bar">
     <a href="reminders.html" class="tab-item">
