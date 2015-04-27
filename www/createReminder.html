@@ -52,23 +52,34 @@
                 <form class="input-group">
                     <div class="input-row">
                         <label>Name</label>
-                        <input type="text" name="reminderTitle" placeholder="Title">
+                        <input type="text" name="reminderTitle" placeholder="Title" />
                     </div>
                     <div class="input-row">
                         <label>Date</label>
-                        <input type="date" name="reminderDate">
+                        <input type="date" name="reminderDate" />
                     </div>
                     <div class="input-row">
                         <label>Time</label>
-                        <input type="time" name="reminderDateTime" value="09:00 AM">
+                        <input type="time" name="reminderDateTime" value="09:00 AM" />
                     </div>
                     <div class="input-row">
                         <label>Repeat</label>
-                        <input type="text" name="reminderFreq" placeholder="Never">
+
+                        <select class="light" style="display: block; width: 10px; height: 1em; margin: 0px;">
+                            <option>Weekly</option>
+                            <option>Daily</option>
+                            <option>Never</option>
+                            <option>Monthly</option>
+                        </select>
                     </div>
                     <div class="input-row">
                         <label>Reminder</label>
-                        <input type="text" name="reminderType" placeholder="30 min">
+
+                        <select class="light" style="display: block; width: 10px; height: 1em; margin: 0px;">
+                            <option>10 minutes</option>
+                            <option>1 hour</option>
+                            <option>15 weeks</option>
+                        </select>
                     </div>
                 </form>
             </div>

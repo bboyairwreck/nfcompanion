@@ -54,6 +54,8 @@ function dateFormat(dateString) {
     result["monthName"] = monthNames[month];
     result["day"] = day;
     result["dayName"] = dayNames[dayOfWeek];
+    // dateLine ~ "April 12, 2015"
+    result["dateLine"] = monthNames[month] + " " + day + ", " + year;
 
     return result;
 }
