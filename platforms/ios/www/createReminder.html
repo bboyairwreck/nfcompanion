@@ -36,7 +36,7 @@
                     <!--Cancel-->
                 <!--</button>-->
             </a>
-            <a href="#" id="doneCreateReminder">
+            <a href="reminders.html" id="doneCreateReminder">
                 <button class="btn btn-positive btn-nav pull-right">Done</button>
             </a>
             <h1 class="title">Create a Reminder</h1>
@@ -64,22 +64,37 @@
                     </div>
                     <div class="input-row">
                         <label>Repeat</label>
-
-                        <select class="light" style="display: block; width: 10px; height: 1em; margin: 0px;">
-                            <option>Weekly</option>
-                            <option>Daily</option>
-                            <option>Never</option>
-                            <option>Monthly</option>
-                        </select>
+                        <label class="repeatLabel">
+                            <span class="repeatString repeatText">Never</span>
+                            <select class="light selectRepeat repeat" style="display: inline-block; width: 10px; height: 1em; margin: 0px;">
+                                <option>Weekly</option>
+                                <option>Daily</option>
+                                <option selected>Never</option>
+                                <option>Monthly</option>
+                            </select>
+                        </label>
                     </div>
                     <div class="input-row">
                         <label>Reminder</label>
-
-                        <select class="light" style="display: block; width: 10px; height: 1em; margin: 0px;">
-                            <option>10 minutes</option>
-                            <option>1 hour</option>
-                            <option>15 weeks</option>
-                        </select>
+                        <label class="repeatLabel">
+                            <span class="repeatString notifications">0 minutes</span>
+                            <select class="light selectRepeat selectNot">
+                                <option selected>0 minutes</option>
+                                <option>5 minutes</option>
+                                <option>10 minutes</option>
+                                <option>15 minutes</option>
+                                <option>30 minutes</option>
+                                <option>45 minutes</option>
+                                <option>1 hour</option>
+                                <option>2 hours</option>
+                                <option>5 hours</option>
+                                <option>10 hours</option>
+                                <option>24 hours</option>
+                                <option>2 days</option>
+                                <option>1 week</option>
+                                <option>15 weeks</option>
+                            </select>
+                        </label>
                     </div>
                 </form>
             </div>

@@ -2,13 +2,19 @@ var personID = 46;
 
 $(document).ready(function() {
 
+    $("select.selectRepeat").change(function() {
+        var remNot = $("select.selectNot option:selected").text();
+        $(".notifications").text(remNot);
+        var repeat = $("select.repeat option:selected").text();
+        $(".repeatText").text(repeat);
+    });
 
     $("#doneCreateReminder").click(function() {
         var name = $("input[name='reminderTitle']").val();
         var date = $("input[name='reminderDate']").val();
         var time = $("input[name='reminderDateTime']").val();
         var datetime = date + " " + time;
-        var reminder = $("input[name='reminderType']").val();
+        var reminder = $(".notifications").text();
         var reminderArr = reminder.split(" ");
         var num = reminderArr[0];
         var type = reminderArr[1];
@@ -28,7 +34,6 @@ $(document).ready(function() {
         });
     });
 });
-
 
 
 function ajaxSuccess(data) {

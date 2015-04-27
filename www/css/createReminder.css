@@ -1,0 +1,35 @@
+.selectRepeat {
+    opacity: 0;
+    color:rgba(255,255,255, 0);
+    right: 0px;
+    top: 50%;
+    position: absolute;
+    /*width: 7em;*/
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: none;
+    border: 1px solid #000000;
+    display: inline-block;
+    height: 1em;
+    margin: 0px;
+}
+
+.repeatLabel {
+    display: inline-block;
+    position: absolute;
+    width: 15em;
+    /*right: 15px;*/
+}
+
+.repeatString {
+    color: grey;
+}
+
+.notifications {
+    width: 100%;
+}
+
+input {
+    color: grey;
+}
