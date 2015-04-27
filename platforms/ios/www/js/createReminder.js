@@ -38,6 +38,7 @@ $(document).ready(function() {
 
 function ajaxSuccess(data) {
     alert(data["message"]);
+    
 }
 
 function ajaxError( xhr, status, errorThrown ) {
