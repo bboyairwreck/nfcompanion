@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var today = new Date();
-    var dd = today.getDate();
+    var dd = today.getDate() + 1;
     var mm = today.getMonth() + 1;
     var yyyy = today.getFullYear();
 

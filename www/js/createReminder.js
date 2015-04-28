@@ -37,8 +37,12 @@ $(document).ready(function() {
 
 
 function ajaxSuccess(data) {
-    alert(data["message"]);
-    
+    if (data["message"] == "success") {
+        alert("Reminder was created!");
+    } else {
+        alert("Error: Reminder was NOT created");
+    }
+
 }
 
 function ajaxError( xhr, status, errorThrown ) {
