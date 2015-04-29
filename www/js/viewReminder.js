@@ -33,7 +33,7 @@ function ajaxSuccess(data) {
             var reminderTime = reminderNum + " " + reminderType;
 
 
-            $("div.reminder-title").text(eventName);
+            $("div.reminder-title").html(eventName);
             $("#time").text(eventTimeFormatted);
             $("div.day").text(eventDateFormatted["day"]);
             $("div.month").text(eventDateFormatted["monthName"]);

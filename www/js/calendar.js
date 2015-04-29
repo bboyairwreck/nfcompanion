@@ -68,7 +68,7 @@ function ajaxSuccess(data) {
             $time.text(taskTimeFormatted);
 
             $name = $newTask.find(".taskName");
-            $name.text(taskName);
+            $name.html(taskName);
             //  dateFormatArr["dayName"] + dateFormatArr["monthName"]
 
             $("#taskTable").prepend($newTask);
