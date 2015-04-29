@@ -48,7 +48,7 @@ function ajaxSuccess(data) {
 
         // inject any thing inside of $newTask;
         var $eventTitle = $newCard.find(".eventTitle");
-        $eventTitle.text(evTitle);
+        $eventTitle.html(evTitle);
 
         var $eventTime = $newCard.find(".reminderTime");
         $eventTime.text(evTimeFormatted);
