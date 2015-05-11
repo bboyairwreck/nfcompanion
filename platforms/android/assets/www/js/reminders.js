@@ -12,7 +12,22 @@ $(document).ready(function() {
         success : ajaxSuccess,
         error : ajaxError
     });
+
+
+    $('body').on('touchend', '.reminderCard', function() {
+        var curEventID = $(this).attr("data-eventID");
+        var eventInfo = [];
+        eventInfo["eventID"] = curEventID;
+        params.push(eventInfo);
+    });
 });
+
+function addEventParam() {
+    //var eventInfo = [];
+    //eventInfo["eventID"] = 1234;
+    //params.push(eventInfo);
+    params["eventID"] = 1234;
+}
 
 function ajaxSuccess(data) {
 
@@ -27,15 +42,17 @@ function ajaxSuccess(data) {
 
         var evTime = evDatetimeArr["time"];
         var evTimeFormatted = timeFormat(evTime);
+        var evEventID = data[i]["EventID"];
 
         var dateFormatArr = dateFormat(evDate);
 
         // inject any thing inside of $newTask;
-        $eventTitle = $newCard.find(".eventTitle");
+        var $eventTitle = $newCard.find(".eventTitle");
         $eventTitle.text(evTitle);
 
-        $eventTime = $newCard.find(".reminderTime");
+        var $eventTime = $newCard.find(".reminderTime");
         $eventTime.text(evTimeFormatted);
+        $newCard.attr("data-eventID", evEventID);
 
         //  dateFormatArr["dayName"] + dateFormatArr["monthName"]
 
@@ -46,8 +63,9 @@ function ajaxSuccess(data) {
 }
 
 function ajaxError( xhr, status, errorThrown ) {
-    alert( "Sorry, there was Ajax problem!" );
+    alert( "Sorry, there was an Ajax problem!" );
     console.log( "Error: " + errorThrown );
     console.log( "Status: " + status );
     console.dir( xhr );
 }
+

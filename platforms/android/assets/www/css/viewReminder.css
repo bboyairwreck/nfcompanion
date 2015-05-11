@@ -1,0 +1,49 @@
+.reminder-header {
+	background-color: white;
+	border-bottom: 1px solid #ddd;
+	height: 100px;
+}
+
+
+.light {
+	color: lightgrey;
+}
+
+.subheader {
+	margin-left: 10px;
+}
+
+.date {
+	float: left;
+	background-color: rgb(0, 161, 255);
+	height: 100px;
+	width: 100px;
+	padding-top: 35px;
+  	padding-left: 25px;
+}
+
+.date .day {
+	font-size: 35px;
+	color: white;
+	margin-bottom: 3px;
+}
+
+.date .month {
+	font-size: 16px;
+	color: white;
+}
+
+.reminder-name {
+	height: 100px;
+	padding-top: 25px;
+  	padding-left: 120px;
+}
+
+.reminder-title {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.reminder-name p {
+	font-size: 20px;
+}

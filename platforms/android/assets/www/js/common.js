@@ -43,17 +43,36 @@ function dateFormat(dateString) {
 
     var dateObj = new Date(dateString);
 
-    var year = dateObj.getYear();
-    var month = dateObj.getMonth();
-    var day = dateObj.getDate();
+    var year = dateObj.getFullYear();
+    var month = dateObj.getMonth() + 1;
+    var day = dateObj.getDate() + 1;
     var dayOfWeek = dateObj.getDay();
 
     var result = [];
     result["year"] = year;
     result["month"] = month;
-    result["monthName"] = monthNames[month];
+    result["monthName"] = monthNames[month-1];
     result["day"] = day;
     result["dayName"] = dayNames[dayOfWeek];
+    // dateLine ~ "April 12, 2015"
+    result["dateLine"] = monthNames[month-1] + " " + day + ", " + year;
 
     return result;
+}
+
+function getMonthString(monthNum) {
+    return monthNames[monthNum - 1];
+}
+
+function getMonthNum(monthString) {
+    if($.inArray(monthString, monthNames)) {
+        var day = monthNames.indexOf(monthString) + 1;
+        if (day < 10) {
+            return "0" + day.toString();
+        } else {
+            return day.toString();
+        }
+    } else {
+        return null;
+    }
 }

@@ -43,3 +43,13 @@ function checkPage() {
         }
     }
 }
+
+var params = [];
+
+function getParams() {
+    if (params.length > 0){
+        return params[params.length - 1];
+    } else {
+        return null;
+    }
+}

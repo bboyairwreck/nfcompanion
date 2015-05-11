@@ -1,29 +1,52 @@
-var patientID = 17;
+var personID = 46;
 
 $(document).ready(function() {
-});
 
-$("#doneCreateReminder").click(function() {
-    var url = "http://ericchee.com/neverforgotten/addEventReminder.php";
+    $("select.selectRepeat").change(function() {
+        var remNot = $("select.selectNot option:selected").text();
+        $(".notifications").text(remNot);
+        var repeat = $("select.repeat option:selected").text();
+        $(".repeatText").text(repeat);
+    });
 
-    $.ajax(url, {
-        dataType : "json",
-        data : {
-            'n' : patientID
-        },
-        success : ajaxSuccess,
-        error : ajaxError
+    $("#doneCreateReminder").click(function() {
+        var name = $("input[name='reminderTitle']").val();
+        var date = $("input[name='reminderDate']").val();
+        var time = $("input[name='reminderDateTime']").val();
+        var datetime = date + " " + time;
+        var reminder = $(".notifications").text();
+        var reminderArr = reminder.split(" ");
+        var num = reminderArr[0];
+        var type = reminderArr[1];
+        var url = "http://ericchee.com/neverforgotten/addEventReminder.php";
+
+        $.ajax(url, {
+            dataType : "json",
+            data : {
+                'name': name,
+                'time': datetime,
+                'num': num,
+                'type': type,
+                'id' : personID
+            },
+            success : ajaxSuccess,
+            error : ajaxError
+        });
     });
 });
 
-function ajaxSuccess(data) {
 
-    alert("Created Reminder");
+function ajaxSuccess(data) {
+    if (data["message"] == "success") {
+        alert("Reminder was created!");
+    } else {
+        alert("Error: Reminder was NOT created");
+    }
 
 }
 
 function ajaxError( xhr, status, errorThrown ) {
-    alert( "Might've created a reminder...." );
+    alert(errorThrown);
     console.log( "Error: " + errorThrown );
     console.log( "Status: " + status );
     console.dir( xhr );
