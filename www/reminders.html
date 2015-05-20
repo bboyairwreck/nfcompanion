@@ -1,91 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Hello World</title>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <head>
+        <title>Hello World</title>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
-    <!-- <link rel="stylesheet" type="text/css" href="css/common.css" /> -->
-    <link rel="stylesheet" type="text/css" href="css/ratchet.css" />
-    <link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.css" />
-    <link rel="stylesheet" type="text/css" href="css/reminders.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="css/common.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/ratchet.css" />
+        <link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.css" />
+        <link rel="stylesheet" type="text/css" href="css/reminders.css" />
 
-    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 
-    <script type="text/javascript" src="js/ratchet2.js"></script>
-    <script type="text/javascript" src="js/push.js"></script>
+        <script type="text/javascript" src="js/ratchet2.js"></script>
+        <script type="text/javascript" src="js/push.js"></script>
 
 
-    <script type="text/javascript" src="js/navigation.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/navigation.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
 
-</head>
-<body>
-<!-- This is the navigator header -->
-<header class="bar bar-nav">
-    <a href="home.html" data-transition="slide-out">
-        <button class="btn btn-link btn-nav pull-left backHome">
-            <span class="icon icon-left-nav"></span>
-            Home
-        </button>
-    </a>
-    <h1 class="title">Reminders</h1>
-    <button class="btn btn-link btn-nav pull-right backHome">
-        <span class="icon icon-phone2"></span>
-    </button>
-</header>
+    </head>
+    <body>
+    
+        <!-- This is the navigator header -->
+        <header class="bar bar-nav">
 
-<!-- This is were the content of your app goes -->
-<div class="content" id="reminders">
-    <div class="content-padded">
-        <a href="createReminder.html">
-            <button id="createEvent" class="btn btn-block">
-                <span class="icon icon-plus"></span>
-                Create a Reminder
+
+            <span class="icon icon-bars pull-left"></span>
+
+
+            <h1 class="title">Reminders</h1>
+            <button class="btn btn-link btn-nav pull-right backHome">
+                <span class="icon icon-phone2"></span>
             </button>
-        </a>
-    </div>
+        </header>
 
-    <div id="reminderList">
-
-    </div>
-
-    <div id="taskTemplate" style="display: none;">
-
-        <a href="viewReminder.html" class="reminderCard" data-transition="slide-in">
-            <div class="card">
-                <ul class="table-view">
-                    <li class="table-view-cell table-view-divider eventTitle">Temp Event name</li>
-                    <li class="table-view-cell">
-                        <p class="reminderTime">10:30 PM</p>
-                    </li>
-                </ul>
+        <!-- This is were the content of your app goes -->
+        <div class="content" id="reminders">
+            <div class="content-padded">
+                <a href="createReminder.html">
+                    <button id="createEvent" class="btn btn-block">
+                        <span class="icon icon-plus"></span>
+                        Create a Reminder
+                    </button>
+                </a>
             </div>
-        </a>
 
-    </div>
+            <div id="reminderList">
 
-</div>
-<nav class="bar-tab bar">
-    <a href="reminders.html" class="tab-item">
-        <span class="icon icon-list3"></span>
-        <span class="tab-label">Reminders</span>
-    </a>
-    <a href="profile.html" class="tab-item" data-transition="slide-in">
-        <span class="icon icon-person"></span>
-        <span class="tab-label">Profile</span>
-    </a>
-    <a href="calendar.html" class="tab-item" data-transition="slide-in">
-        <span class="icon icon-calendar"></span>
-        <span class="tab-label">Calendar</span>
-    </a>
-    <a href="settings.html" class="tab-item" data-transition="slide-in">
-        <span class="icon icon-gear"></span>
-        <span class="tab-label">Settings</span>
-    </a>
-</nav>
-</body>
+            </div>
+
+            <div id="taskTemplate" style="display: none;">
+
+                <a href="viewReminder.html" class="reminderCard" data-transition="slide-in">
+                    <div class="card">
+                        <ul class="table-view">
+                            <li class="table-view-cell table-view-divider eventTitle">Temp Event name</li>
+                            <li class="table-view-cell">
+                                <p class="reminderTime">10:30 PM</p>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+        <nav class="bar-tab bar">
+            <a href="reminders.html" class="tab-item">
+                <span class="icon icon-list3"></span>
+                <span class="tab-label">Reminders</span>
+            </a>
+            <a href="profile.html" class="tab-item" data-transition="slide-in">
+                <span class="icon icon-person"></span>
+                <span class="tab-label">Profile</span>
+            </a>
+            <a href="calendar.html" class="tab-item" data-transition="slide-in">
+                <span class="icon icon-calendar"></span>
+                <span class="tab-label">Calendar</span>
+            </a>
+            <a href="settings.html" class="tab-item" data-transition="slide-in">
+                <span class="icon icon-gear"></span>
+                <span class="tab-label">Settings</span>
+            </a>
+        </nav>
+    </body>
 </html>

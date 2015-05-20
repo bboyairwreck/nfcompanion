@@ -6,10 +6,40 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    font-size:12px;
-	font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    width:100%;
+    /*font-size:12px;*/
+	/*font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;*/
+    /*height:100%;*/
+    /*margin:0px;*/
+    /*padding:0px;*/
+    /*width:100%;*/
 }
+
+#slideOutMenuWrap {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 1000;
+    -webkit-transform: translateX(-1000px);
+    -webkit-transition: opacity .3s;
+    opacity: 0;
+}
+
+    #slideOutMenu {
+        height: 100%;
+        width: 90%;
+        background-color: #f3f3f3;
+        z-index: 1000;
+        -webkit-transform: translateX(-1000px);
+        -webkit-transition: -webkit-transform .3s;
+    }
+
+#slideOutMenuWrap.slideOutMenuAnimOpen {
+    opacity:1;
+    -webkit-transform: translateX(0px);
+}
+
+    #slideOutMenuWrap.slideOutMenuAnimOpen #slideOutMenu {
+        -webkit-transform: translateX(0px);
+
+    }

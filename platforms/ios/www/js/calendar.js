@@ -92,7 +92,8 @@ function calendar(month, year) {
         var $noTask = "<tr><td class='noTask'>No Events</td></tr>";
         $("#taskTable").prepend($noTask);
     });
-
+    
+    // date cell click function
     $("#cal td").click(function() {
         $("td.selected").removeClass("selected");
         $(this).addClass("selected");

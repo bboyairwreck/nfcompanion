@@ -10,6 +10,7 @@
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		2FA281FEFE93271AE1A40FE1 /* menu.js in Sources */ = {isa = PBXBuildFile; fileRef = 2FA28DA89D6BC005D59B0273 /* menu.js */; };
 		2FA282A434F2E5717426A898 /* viewReminder.html in Resources */ = {isa = PBXBuildFile; fileRef = 2FA28F666EBA201826BE6EBA /* viewReminder.html */; };
 		2FA287D62147453961BFA68A /* ajaxTest.js in Sources */ = {isa = PBXBuildFile; fileRef = 2FA28BC0E3C8FE369649AE61 /* ajaxTest.js */; };
 		2FA28A68A69570823E4A043A /* viewReminder.js in Sources */ = {isa = PBXBuildFile; fileRef = 2FA284B610B1AC9A143975A3 /* viewReminder.js */; };
@@ -80,6 +81,7 @@
 		2FA28BC0E3C8FE369649AE61 /* ajaxTest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = ajaxTest.js; path = ../../www/js/ajaxTest.js; sourceTree = "<group>"; };
 		2FA28BCC648E92D961D37FCE /* settingsHomePage.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = settingsHomePage.css; path = ../../www/css/settingsHomePage.css; sourceTree = "<group>"; };
 		2FA28C9E814B98EF6520DDFF /* reminders.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = reminders.js; path = ../../www/js/reminders.js; sourceTree = "<group>"; };
+		2FA28DA89D6BC005D59B0273 /* menu.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = menu.js; path = ../../www/js/menu.js; sourceTree = "<group>"; };
 		2FA28F666EBA201826BE6EBA /* viewReminder.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = viewReminder.html; path = ../../www/viewReminder.html; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
@@ -179,6 +181,7 @@
 				2FA28F666EBA201826BE6EBA /* viewReminder.html */,
 				2FA281EC70717CAB88DEF87A /* createReminder.js */,
 				2FA284B610B1AC9A143975A3 /* viewReminder.js */,
+				2FA28DA89D6BC005D59B0273 /* menu.js */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				2FA28E95D877064794FD9CFF /* reminders.js in Sources */,
 				2FA28DFB07A3869800FCB98A /* createReminder.js in Sources */,
 				2FA28A68A69570823E4A043A /* viewReminder.js in Sources */,
+				2FA281FEFE93271AE1A40FE1 /* menu.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
