@@ -49,3 +49,35 @@ body {
         -webkit-transform: translateX(0px);
 
     }
+
+    .circleProfile {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #4891BF;
+        float:left;
+        color:white;
+        line-height:50px;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    .profName {
+        margin-left: 70px;
+        font-size: 1.2em;
+        line-height: normal;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+    }
+
+    #addPatient .circleProfile {
+        background-color: #ffffff;
+        color: #037AFF;
+        border: 1px solid grey;
+        /*line-height: 42px;*/
+        /*padding-left: 2px;*/
+    }

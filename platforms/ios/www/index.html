@@ -23,13 +23,41 @@
         
     </head>
     <body>
-
+        <!-- menu wrap-->
         <div id="slideOutMenuWrap">
             <div id="exitMenuArea"></div>
             <div id="slideOutMenu">
+                <ul class="table-view" id="profList">
+                    <li class="table-view-cell media profileWrap" data-personID="" data-patientID="">
 
+                        <a href="reminders.html" data-transition="slide-in">
+                            <div class="circleProfile">L</div>
+                            <div class="media-body profName">Lina Johnson</div>
+                        </a>
+
+
+                    </li>
+
+                    <!--Add patient button-->
+                    <li class="table-view-cell media" data-personID="" data-patientID="">
+                        <a id="addPatient" href="#" data-transition="slide-in">
+                            <div class="circleProfile"><span class="icon icon-plus"></span></div>
+                            <div class="media-body profName">Add Patient</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul id="profTemp" style="display: none;">
+                    <li class="table-view-cell media profileWrap" data-personID="" data-patientID="">
+                        <a class="profileListTag" href="reminders.html" data-transition="slide-in">
+                            <div class="circleProfile">J</div>
+                            <div class="media-body profName">Jane Doe</div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
+        <!-- end of menu wrap-->
 
         <!-- This is the navigator header -->
         <header class="bar bar-nav">
