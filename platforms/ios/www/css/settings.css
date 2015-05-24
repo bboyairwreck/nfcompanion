@@ -1,0 +1,39 @@
+/* Invisible time input*/
+.optionClass {
+    opacity: 0;
+    color:rgba(255,255,255, 0);
+    right: 0px;
+    top: 50%;
+    position: absolute;
+    width: 7em;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: none;
+    border: 1px solid #000000;
+    display: block;
+}
+
+.optionDisplay {
+    right: 35px;
+    position: absolute;
+    display: inline-block;
+}
+
+#welcomeTimeLabel {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+}
+
+#welcomeTimeString {
+    color: #0062cc;
+}
+
+#welcomeTimeLabel .icon-edit {
+    margin-left: 5px;
+}
+
+/*#addTime {*/
+    /*opacity: 0.2;*/
+/*}*/

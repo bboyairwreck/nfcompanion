@@ -20,6 +20,7 @@
         
         <script type="text/javascript" src="js/navigation.js"></script>
         <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/dataStorage.js"></script>
     </head>
     <body>
         <!-- This is the navigator header -->
@@ -38,53 +39,78 @@
         <!-- This is were the content of your app goes -->
         <div class="content" id="settings">
             <ul class="table-view">
-                <li class="table-view-cell media">
-                    <a class="navigate-right" href="settingsHomePage.html">
-                        <span class="media-object pull-left icon icon-home"></span>
-                        <div class="media-body">
-                            Home Page
-                        </div>
-                    </a>
+                <li class="table-view-divider">LAYOUT</li>
+                <li class="table-view-cell">
+                    <label class="columnName">Reminder View</label>
+                    <label>
+                        <a class="navigate-right">
+                            <span id="viewOption" class="optionDisplay">Calendar</span>
+                        </a>
+                        <select class="light selectRepeat repeat optionClass" id="selectView">
+                            <option selected>Calendar</option>
+                            <option>List</option>
+                        </select>
+                    </label>
                 </li>
-                <li class="table-view-cell media">
-                    <a class="navigate-right" href="settingsLayout.html">
-                        <span class="media-object pull-left icon icon-gear"></span>
-                        <div class="media-body">
-                            Layout
-                        </div>
-                    </a>
+                <li class="table-view-divider">BUTTONS</li>
+                <li class="table-view-cell">
+                    Create Reminder
+                    <div class="toggle active" id="addReminders">
+                        <div class="toggle-handle"></div>
+                    </div>
                 </li>
-                <li class="table-view-cell media">
-                    <a class="navigate-right" href="settingsLayout.html">
-                        <span class="media-object pull-left icon icon-more-vertical"></span>
-                        <div class="media-body">
-                            Buttons
-                        </div>
-                    </a>
+                <li class="table-view-cell">
+                    Call
+                    <div class="toggle active" id="addCall">
+                        <div class="toggle-handle"></div>
+                    </div>
                 </li>
-                <li class="table-view-cell media">
-                    <a class="navigate-right" href="settingsLayout.html">
-                        <span class="media-object pull-left icon icon-star-filled"></span>
-                        <div class="media-body">
-                            SOS
-                        </div>
-                    </a>
+                <li class="table-view-cell">
+                    SOS
+                    <div class="toggle active" id="addSOS">
+                        <div class="toggle-handle"></div>
+                    </div>
                 </li>
-                <li class="table-view-cell media">
-                    <a class="navigate-right" href="settingsLayout.html">
-                        <span class="media-object pull-left icon icon-sound4"></span>
-                        <div class="media-body">
-                            Sound
-                        </div>
-                    </a>
+                <li class="table-view-divider">SOUND</li>
+                <li class="table-view-cell" id="addTime">
+                    Greeting Time
+                    <label id="welcomeTimeLabel">
+                        <span id="welcomeTimeString">9:00 AM</span><span class="icon icon-edit"></span>
+                        <input id="welcomeTime" class="optionClass" type="time" value="09:00" />
+                    </label>
                 </li>
-                <li class="table-view-cell media">
-                    <a class="navigate-right">
-                        <span class="media-object pull-left icon icon-pages"></span>
-                        <div class="media-body">
-                            Accessibility
-                        </div>
-                    </a>
+                <li class="table-view-divider">ACCESSIBILITY</li>
+                <li class="table-view-cell">
+                    <label class="columnName">Text Size</label>
+                    <label>
+                        <a class="navigate-right"><span id="textOption" class="optionDisplay">Large</span></a>
+                        <select class="light selectRepeat repeat optionClass">
+                            <option>Medium</option>
+                            <option selected>Large</option>
+                            <option>X-Large</option>
+                        </select>
+                    </label>
+                </li>
+                <li class="table-view-cell">
+                    <label class="columnName">Input Method</label>
+                    <label>
+                        <a class="navigate-right"><span id="inputOption" class="optionDisplay">Keyboard</span></a>
+                        <select class="light selectRepeat repeat optionClass">
+                            <option selected>Keyboard</option>
+                            <option>Handwriting</option>
+                        </select>
+                    </label>
+                </li>
+                <li class="table-view-cell">
+                    <label class="columnName">Scrolling</label>
+                    <label>
+                        <a class="navigate-right"><span id="scrollingOption" class="optionDisplay">Only Arrows</span></a>
+                        <select class="light selectRepeat repeat optionClass">
+                            <option>Both Arrows and Scrolling</option>
+                            <option selected>Only Arrows</option>
+                            <option>Only Scrolling</option>
+                        </select>
+                    </label>
                 </li>
             </ul>
         </div>

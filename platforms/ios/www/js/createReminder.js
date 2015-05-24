@@ -1,4 +1,4 @@
-var personID = 46;
+var personID = 43; // Person ID of Companion - Eric
 
 $(document).ready(function() {
 
