@@ -44,30 +44,30 @@
                     <label class="columnName">Reminder View</label>
                     <label>
                         <a class="navigate-right">
-                            <span id="viewOption" class="optionDisplay">Calendar</span>
+                            <span id="viewOption" class="optionDisplay"></span>
                         </a>
                         <select class="light selectRepeat repeat optionClass" id="selectView">
-                            <option selected>Calendar</option>
-                            <option>List</option>
+                            <option value="Calendar">Calendar</option>
+                            <option value="List">List</option>
                         </select>
                     </label>
                 </li>
                 <li class="table-view-divider">BUTTONS</li>
                 <li class="table-view-cell">
                     Create Reminder
-                    <div class="toggle active" id="addReminders">
+                    <div class="toggle" id="addReminders">
                         <div class="toggle-handle"></div>
                     </div>
                 </li>
                 <li class="table-view-cell">
                     Call
-                    <div class="toggle active" id="addCall">
+                    <div class="toggle" id="addCall">
                         <div class="toggle-handle"></div>
                     </div>
                 </li>
                 <li class="table-view-cell">
                     SOS
-                    <div class="toggle active" id="addSOS">
+                    <div class="toggle" id="addSOS">
                         <div class="toggle-handle"></div>
                     </div>
                 </li>
@@ -83,34 +83,29 @@
                 <li class="table-view-cell">
                     <label class="columnName">Text Size</label>
                     <label>
-                        <a class="navigate-right"><span id="textOption" class="optionDisplay">Large</span></a>
-                        <select class="light selectRepeat repeat optionClass">
-                            <option>Medium</option>
-                            <option selected>Large</option>
-                            <option>X-Large</option>
+                        <a class="navigate-right"><span id="textOption" class="optionDisplay"></span></a>
+                        <select class="light selectRepeat repeat optionClass" id="selectTextSize">
+                            <option value="0">Medium</option>
+                            <option value="1">Large</option>
+                            <option value="2">X-Large</option>
                         </select>
                     </label>
                 </li>
                 <li class="table-view-cell">
                     <label class="columnName">Input Method</label>
                     <label>
-                        <a class="navigate-right"><span id="inputOption" class="optionDisplay">Keyboard</span></a>
-                        <select class="light selectRepeat repeat optionClass">
-                            <option selected>Keyboard</option>
-                            <option>Handwriting</option>
+                        <a class="navigate-right"><span id="inputOption" class="optionDisplay"></span></a>
+                        <select class="light selectRepeat repeat optionClass" id="selectInput">
+                            <option value="Keyboard">Keyboard</option>
+                            <option value="Handwriting">Handwriting</option>
                         </select>
                     </label>
                 </li>
                 <li class="table-view-cell">
-                    <label class="columnName">Scrolling</label>
-                    <label>
-                        <a class="navigate-right"><span id="scrollingOption" class="optionDisplay">Only Arrows</span></a>
-                        <select class="light selectRepeat repeat optionClass">
-                            <option>Both Arrows and Scrolling</option>
-                            <option selected>Only Arrows</option>
-                            <option>Only Scrolling</option>
-                        </select>
-                    </label>
+                    Scrolling Arrows
+                    <div class="toggle" id="addArrows">
+                        <div class="toggle-handle"></div>
+                    </div>
                 </li>
             </ul>
         </div>

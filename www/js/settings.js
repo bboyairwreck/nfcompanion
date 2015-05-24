@@ -3,17 +3,17 @@ var companionID = localStorage.getItem("companion");
 
 $(document).ready(function() {
     myFunction();
-    alert(patientID);
-    alert(companionID);
+    populateSettings();
+    //alert(patientID);
+    //alert(companionID);
     document.querySelector("#addReminders").addEventListener('toggle', remindersButtonFunction);
     document.querySelector("#addCall").addEventListener('toggle', callButtonFunction);
     document.querySelector("#addSOS").addEventListener('toggle', sosButtonFunction);
+    document.querySelector("#addArrows").addEventListener('toggle', scrollingArrowsFunction);
 });
 
 function myFunction() {
     $('h1').text("Settings");
-
-    var i = 0;
 
     $("#welcomeTime").change(function() {
 
@@ -37,7 +37,7 @@ function myFunction() {
 
             timeString = hours + ":" + mins + AMorPM;
         } else {
-            var time = $("#welcomeTime").val("00:00");
+            $("#welcomeTime").val("00:00");
             timeString = "12:00 AM";
         }
 
@@ -47,62 +47,135 @@ function myFunction() {
     $("select.optionClass").change(function() {
         var selected = $(this).children(":selected").text();
         $(this).prev().children(":first").text(selected);
-        var columnName = $(this).parent().prev().text();
-        //updateSettings(patientID, columnName, selected);
+        //var columnName = $(this).parent().prev().text();
+        var columnName;
+        if (selected == "Calendar") {
+            columnName = "CalendarLayout";
+            selected = 1;
+            updateSettings("ListLayout", 0);
+        } else if (selected == "List") {
+            columnName = "ListLayout";
+            selected = 1;
+            updateSettings("CalendarLayout", 0);
+        } else if (selected == "Keyboard") {
+            columnName = "KeyboardInput";
+            selected = 1;
+            updateSettings("HandwritingInput", 0);
+        } else if (selected == "Handwriting") {
+            columnName = "HandwritingInput";
+            selected = 1;
+            updateSettings("KeyboardInput", 0);
+        } else if (selected == "Medium") {
+            columnName = "TextSize";
+            selected = 0;
+        } else if (selected == "Large") {
+            columnName = "TextSize";
+            selected = 1;
+        } else if (selected == "X-Large") {
+            columnName = "TextSize";
+            selected = 2;
+        }
+        updateSettings(columnName, selected);
     });
 }
 
+function populateSettings() {
+    var url = "http://ericchee.com/neverforgotten/getSettings_Patient.php";
+
+    $.ajax(url, {
+        dataType : "json",
+        data : {
+            'n' : 17
+        },
+        success : populateSuccess,
+        error : ajaxError
+    });
+}
+
+function populateSuccess(data) {
+    // populate layout settings
+    var layout = data["Layout"];
+    $("#selectView").val(layout);
+    //var selected = $("#selectView").children(":selected").text();
+    $("#selectView").prev().children(":first").text(layout);
+
+    // populate text size
+    var sizeNum = data["TextSize"];
+    $("#selectTextSize").val(sizeNum);
+    var size = $("#selectTextSize").children(":selected").text();
+    $("#selectTextSize").prev().children(":first").text(size);
+
+    // populate input
+    var input = data["Input"];
+    $("#selectInput").val(input);
+    //var inputText = $("#selectInput").children(":selected").text();
+    $("#selectInput").prev().children(":first").text(input);
+
+    // populate toggle settings
+    if (data["CreateReminderButton"] == 1) {
+        $("#addReminders").addClass('active');
+    }
+    if (data["CallButton"] == 1) {
+        $("#addCall").addClass('active');
+    }
+    if (data["ScrollingArrows"] == 1) {
+        $("#addArrows").addClass('active');
+    }
+}
+
 function remindersButtonFunction() {
-    //var patientID = localStorage.getItem("patient");
-    //alert(patientID);
     if ($("#addReminders").hasClass('active')) {
-        updateSettings(patientID, 'CreateReminderButton', 1);
+        updateSettings('CreateReminderButton', 1);
     } else {
-        updateSettings(patientID, 'CreateReminderButton', 0);
+        updateSettings('CreateReminderButton', 0);
     }
 }
 
 function callButtonFunction() {
-    //var patientID = localStorage.getItem("patient");
-    //alert(patientID);
     if ($("#addCall").hasClass('active')) {
-        updateSettings(patientID, 'CallButton', 1);
+        updateSettings('CallButton', 1);
     } else {
-        updateSettings(patientID, 'CallButton', 0);
+        updateSettings('CallButton', 0);
     }
 }
 
 function sosButtonFunction() {
-    var patientID = localStorage.getItem("patient");
     if ($("#addSOS").hasClass('active')) {
-        updateSettings(patientID, 'CreateReminderButton', 1);
+        updateSettings('CreateReminderButton', 1);
     } else {
-        updateSettings(patientID, 'CreateReminderButton', 0);
+        updateSettings('CreateReminderButton', 0);
     }
 }
 
-function updateSettings(patient, columnName, value) {
+function scrollingArrowsFunction() {
+    if ($("#addArrows").hasClass('active')) {
+        updateSettings('ScrollingArrows', 1);
+    } else {
+        updateSettings('ScrollingArrows', 0);
+    }
+}
+
+function updateSettings(columnName, value) {
     var url = "http://ericchee.com/neverforgotten/updatePatientSettings.php";
 
     $.ajax(url, {
         dataType : "json",
         data : {
-            'n' : patient,
+            'n' : 17,
             'col' : columnName,
             'val' : value
         },
-        success : ajaxSuccess,
+        success : updateSuccess,
         error : ajaxError
     });
 }
 
-function ajaxSuccess(data) {
+function updateSuccess(data) {
     if (data["message"] == "success") {
         alert("Settings updated!");
     } else {
         alert("Error: Settings was NOT updated");
     }
-
 }
 
 function ajaxError( xhr, status, errorThrown ) {

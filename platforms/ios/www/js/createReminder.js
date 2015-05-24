@@ -1,4 +1,6 @@
+// TODO get local storage working
 var personID = 43; // Person ID of Companion - Eric
+var patientID = 17;
 
 $(document).ready(function() {
 
@@ -20,6 +22,7 @@ $(document).ready(function() {
         var type = reminderArr[1];
         var url = "http://ericchee.com/neverforgotten/addEventReminder.php";
 
+        alert(name + " " + datetime + " " + num + " " + type);
         $.ajax(url, {
             dataType : "json",
             data : {
@@ -27,16 +30,17 @@ $(document).ready(function() {
                 'time': datetime,
                 'num': num,
                 'type': type,
-                'id' : personID
+                'id' : personID,
+                'patID' : patientID
             },
-            success : ajaxSuccess,
+            success : createSuccess,
             error : ajaxError
         });
     });
 });
 
 
-function ajaxSuccess(data) {
+function createSuccess(data) {
     if (data["message"] == "success") {
         alert("Reminder was created!");
     } else {
