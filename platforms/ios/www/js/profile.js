@@ -1,4 +1,10 @@
+var patientID = localStorage.getItem("patient");
+var firstName = localStorage.getItem("firstName");
+var lastName = localStorage.getItem("lastName");
+
 $(document).ready(function() {
+    $fullName = firstName + " " + lastName;
+    $("#main").html($fullName);
 
     $("#editButton").click(function(){
         $name = $("#main").text();

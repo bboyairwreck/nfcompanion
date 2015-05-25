@@ -1,11 +1,8 @@
 var patientID = localStorage.getItem("patient");
-var companionID = localStorage.getItem("companion");
 
 $(document).ready(function() {
     myFunction();
     populateSettings();
-    //alert(patientID);
-    //alert(companionID);
     document.querySelector("#addReminders").addEventListener('toggle', remindersButtonFunction);
     document.querySelector("#addCall").addEventListener('toggle', callButtonFunction);
     document.querySelector("#addSOS").addEventListener('toggle', sosButtonFunction);
@@ -85,7 +82,7 @@ function populateSettings() {
     $.ajax(url, {
         dataType : "json",
         data : {
-            'n' : 17
+            'n' : patientID
         },
         success : populateSuccess,
         error : ajaxError
@@ -161,7 +158,7 @@ function updateSettings(columnName, value) {
     $.ajax(url, {
         dataType : "json",
         data : {
-            'n' : 17,
+            'n' : patientID,
             'col' : columnName,
             'val' : value
         },

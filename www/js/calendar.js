@@ -1,3 +1,5 @@
+var patientID = localStorage.getItem("patient");
+
 $(document).ready(function() {
     var today = new Date();
     var dd = today.getDate();
@@ -115,7 +117,8 @@ function setupCalendar(monthYear) {
     $.ajax(url, {
         dataType : "json",
         data : {
-            'n' : monthYear
+            'n' : patientID,
+            'date' : monthYear
         },
         success : setup,
         error : ajaxError

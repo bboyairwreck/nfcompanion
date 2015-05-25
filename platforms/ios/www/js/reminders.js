@@ -1,4 +1,4 @@
-var patientID = 17;
+var patientID = localStorage.getItem("patient");
 
 $(document).ready(function() {
 

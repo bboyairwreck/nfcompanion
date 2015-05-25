@@ -1,3 +1,40 @@
+// TODO pass in the correct parameters
+if (localStorage.getItem("patient") === null) {     // local storage patient id
+    localStorage.setItem("patient", 17);
+}
+if (localStorage.getItem("personPatient") === null) {      // local storage person id of patient
+    localStorage.setItem("personPatient", 46);
+}
+if (localStorage.getItem("personCompanion") === null) {      // local storage person id of companion
+    localStorage.setItem("personCompanion", 43);
+}
+if (localStorage.getItem("companion") === null) {     // local storage companion id
+    localStorage.setItem("companion", 22);
+}
+if (localStorage.getItem("firstName") === null) {
+    var urlPatient = "http://ericchee.com/neverforgotten/getPatient.php";
+    $.ajax(urlPatient, {
+        dataType : "json",
+        data : {
+            'n' : 17
+        },
+        success : setName,
+        error : setNameError
+    });
+}
+
+function setName(data) {
+    localStorage.setItem("firstName", data["PersonFName"]);
+    localStorage.setItem("lastName", data["PersonLName"]);
+}
+
+function setNameError( xhr, status, errorThrown ) {
+    alert(errorThrown);
+    console.log( "Error: " + errorThrown );
+    console.log( "Status: " + status );
+    console.dir( xhr );
+}
+
 function hideKeyboard() {
     document.activeElement.blur();
     $("input").blur();
