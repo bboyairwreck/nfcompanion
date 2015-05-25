@@ -30,13 +30,13 @@ $(document).ready(function() {
         $("#allergies li").each(function(index) {
             $allergies = $allergies + $(this).text() + " ";
         });
-        alert($allergies);
+        //alert($allergies);
         $("input[name='allergies']").prop('value', $allergies);
         $meds = "";
         $("#meds li").each(function(index) {
             $meds = $meds + $(this).text() + " ";
         });
-        alert($meds);
+        //alert($meds);
         $("input[name='meds']").prop('value', $meds);
         $insurance = $("#insurance").text();
         $("input[name='insurance']").prop('value', $insurance);

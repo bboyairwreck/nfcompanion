@@ -1,3 +1,5 @@
+var companionID = localStorage.getItem("companion");
+
 $(document).ready(function(){
     $(".icon-bars").on("touchend", function(){
         $("#slideOutMenuWrap").addClass("slideOutMenuAnimOpen");
@@ -14,20 +16,20 @@ $(document).ready(function(){
             crossDomain: true,
             contentType: "application/json; charset=utf-8",
             url: "http://ericchee.com/neverforgotten/relatedCompanions.php",
-            data: { n: 22 },
+            data: { n: companionID },
             dataType : "json",
-            success : ajaxSuccess,
+            success : menuSuccess,
             error : ajaxError
         });
     }
 
-    $("#addPatient").on("touchend", function(){
+    $("#addPatient").on("touchend", function(){             // TODO need an add patient functionality
         alert("TODO: need to create this functionality");
     });
 
 });
 
-function ajaxSuccess(data) {
+function menuSuccess(data) {
     var colors = ["45B372", "4891BF", "E59E3A"];
     var colorIndex = 0;
 
@@ -57,11 +59,4 @@ function ajaxSuccess(data) {
     }
 
     $("#profList").addClass("fetchedProfiles");
-}
-
-function ajaxError( xhr, status, errorThrown ) {
-    alert( "Sorry, there was an ajax problem!" );
-    console.log( "Error: " + errorThrown );
-    console.log( "Status: " + status );
-    console.dir( xhr );
 }

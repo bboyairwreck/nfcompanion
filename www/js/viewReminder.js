@@ -9,12 +9,12 @@ $(document).ready(function() {
         data : {
             'n' : eventID
         },
-        success : ajaxSuccess,
+        success : getRemindersSuccess,
         error : ajaxError
     });
 });
 
-function ajaxSuccess(data) {
+function getRemindersSuccess(data) {
     $("#alerts").empty();
     if (data.length > 0) {
         for (var i = 0; i < data.length; i++){

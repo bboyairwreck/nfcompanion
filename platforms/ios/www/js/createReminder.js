@@ -1,6 +1,5 @@
-// TODO get local storage working
-var personID = 43; // Person ID of Companion - Eric
-var patientID = 17;
+var personID = localStorage.getItem("personCompanion"); // Person ID of Companion - Eric
+var patientID = localStorage.getItem("patient");        // Patient ID of related Patient - Margie
 
 $(document).ready(function() {
 
@@ -22,7 +21,7 @@ $(document).ready(function() {
         var type = reminderArr[1];
         var url = "http://ericchee.com/neverforgotten/addEventReminder.php";
 
-        alert(name + " " + datetime + " " + num + " " + type);
+        //alert(name + " " + datetime + " " + num + " " + type);
         $.ajax(url, {
             dataType : "json",
             data : {
@@ -47,11 +46,4 @@ function createSuccess(data) {
         alert("Error: Reminder was NOT created");
     }
 
-}
-
-function ajaxError( xhr, status, errorThrown ) {
-    alert(errorThrown);
-    console.log( "Error: " + errorThrown );
-    console.log( "Status: " + status );
-    console.dir( xhr );
 }

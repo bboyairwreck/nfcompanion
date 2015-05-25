@@ -169,15 +169,9 @@ function updateSettings(columnName, value) {
 
 function updateSuccess(data) {
     if (data["message"] == "success") {
-        alert("Settings updated!");
+        //alert("Settings updated!");
     } else {
         alert("Error: Settings was NOT updated");
     }
 }
 
-function ajaxError( xhr, status, errorThrown ) {
-    alert(errorThrown);
-    console.log( "Error: " + errorThrown );
-    console.log( "Status: " + status );
-    console.dir( xhr );
-}

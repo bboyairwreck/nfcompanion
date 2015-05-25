@@ -9,7 +9,7 @@ $(document).ready(function() {
         data : {
             'n' : patientID
         },
-        success : ajaxSuccess,
+        success : remindersSuccess,
         error : ajaxError
     });
 
@@ -29,7 +29,7 @@ function addEventParam() {
     params["eventID"] = 1234;
 }
 
-function ajaxSuccess(data) {
+function remindersSuccess(data) {
 
     for (var i = 0; i < data.length; i++){
         var $newCard = $("#taskTemplate .reminderCard").clone();
@@ -60,12 +60,5 @@ function ajaxSuccess(data) {
         $("#reminderList").prepend($newCard);
     }
 
-}
-
-function ajaxError( xhr, status, errorThrown ) {
-    alert( "Sorry, there was an Ajax problem!" );
-    console.log( "Error: " + errorThrown );
-    console.log( "Status: " + status );
-    console.dir( xhr );
 }
 

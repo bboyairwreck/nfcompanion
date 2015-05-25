@@ -175,9 +175,3 @@ function updateSuccess(data) {
     }
 }
 
-function ajaxError( xhr, status, errorThrown ) {
-    alert(errorThrown);
-    console.log( "Error: " + errorThrown );
-    console.log( "Status: " + status );
-    console.dir( xhr );
-}
