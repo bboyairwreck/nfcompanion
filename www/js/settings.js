@@ -162,7 +162,10 @@ function updateSettings(columnName, value) {
             'col' : columnName,
             'val' : value
         },
-        success : updateSuccess,
+        success : function(data){
+            updateSuccess(data);
+            firebaseSettings(columnName, value);
+        },
         error : ajaxError
     });
 }
@@ -173,5 +176,17 @@ function updateSuccess(data) {
     } else {
         alert("Error: Settings was NOT updated");
     }
+}
+
+function firebaseSettings(columnName, value) {
+    var fire = new Firebase('https://neverforgotten.firebaseio.com/');
+
+    // Get patient data
+    var patID =  localStorage.getItem("patient");
+    var patientFire = fire.child(patID + "/" + columnName);
+
+    //var jsonData = {};
+    //jsonData[key] = value;
+    patientFire.set(value);
 }
 
