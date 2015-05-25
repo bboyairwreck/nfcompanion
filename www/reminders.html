@@ -6,9 +6,9 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
 
-        <!-- <link rel="stylesheet" type="text/css" href="css/common.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
         <link rel="stylesheet" type="text/css" href="css/ratchet.css" />
         <link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.css" />
         <link rel="stylesheet" type="text/css" href="css/reminders.css" />
@@ -17,6 +17,7 @@
 
         <script type="text/javascript" src="js/ratchet2.js"></script>
         <script type="text/javascript" src="js/push.js"></script>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 
 
         <script type="text/javascript" src="js/navigation.js"></script>
@@ -25,6 +26,41 @@
 
     </head>
     <body>
+        <!-- menu wrap-->
+        <div id="slideOutMenuWrap">
+            <div id="exitMenuArea"></div>
+            <div id="slideOutMenu">
+                <ul class="table-view" id="profList">
+                    <li class="table-view-cell media profileWrap" data-personID="" data-patientID="">
+
+                        <a href="reminders.html" data-transition="fade">
+                            <div class="circleProfile">L</div>
+                            <div class="media-body profName">Lina Johnson</div>
+                        </a>
+
+
+                    </li>
+
+                    <!--Add patient button-->
+                    <li class="table-view-cell media" data-personID="" data-patientID="">
+                        <a id="addPatient" href="#" data-transition="fade">
+                            <div class="circleProfile"><span class="icon icon-plus"></span></div>
+                            <div class="media-body profName">Add Patient</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul id="profTemp" style="display: none;">
+                    <li class="table-view-cell media profileWrap" data-personID="" data-patientID="">
+                        <a class="profileListTag" href="reminders.html" data-transition="fade">
+                            <div class="circleProfile">J</div>
+                            <div class="media-body profName">Jane Doe</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end of menu wrap-->
 
         <!-- This is the navigator header -->
         <header class="bar bar-nav">

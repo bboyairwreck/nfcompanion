@@ -6,7 +6,7 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
 
         <link rel="stylesheet" type="text/css" href="css/common.css" />
         <link rel="stylesheet" type="text/css" href="css/ratchet.css" />
@@ -21,6 +21,7 @@
         
         <script type="text/javascript" src="js/navigation.js"></script>
         <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/dataStorage.js"></script>
         
     </head>
     <body>
@@ -75,14 +76,26 @@
         <div class="content" id="index">
             <ul class="table-view">
                 <li class="table-view-cell">
-                    <a class="navigate-right" href="home.html" data-transition="slide-in">Profiles</a>
+                    <a class="navigate-right" href="reminders.html" data-transition="slide-in">Reminders</a>
                 </li>
             </ul>
         </div>
         <nav class="bar-tab bar">
-            <a href="home.html" class="tab-item">
+            <a href="reminders.html" class="tab-item">
+                <span class="icon icon-list3"></span>
+                <span class="tab-label">Reminders</span>
+            </a>
+            <a href="profile.html" class="tab-item" data-transition="slide-in">
                 <span class="icon icon-person"></span>
-                <span class="tab-label">Profiles</span>
+                <span class="tab-label">Profile</span>
+            </a>
+            <a href="calendar.html" class="tab-item" data-transition="slide-in">
+                <span class="icon icon-calendar"></span>
+                <span class="tab-label">Calendar</span>
+            </a>
+            <a href="settings.html" class="tab-item" data-transition="slide-in">
+                <span class="icon icon-gear"></span>
+                <span class="tab-label">Settings</span>
             </a>
         </nav>
     </body>

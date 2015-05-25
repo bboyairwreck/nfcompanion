@@ -49,19 +49,19 @@ function myFunction() {
         if (selected == "Calendar") {
             columnName = "CalendarLayout";
             selected = 1;
-            updateSettings("ListLayout", 0);
+            updateSettings("ListLayout", 0, false);
         } else if (selected == "List") {
             columnName = "ListLayout";
             selected = 1;
-            updateSettings("CalendarLayout", 0);
+            updateSettings("CalendarLayout", 0, false);
         } else if (selected == "Keyboard") {
             columnName = "KeyboardInput";
             selected = 1;
-            updateSettings("HandwritingInput", 0);
+            updateSettings("HandwritingInput", 0, false);
         } else if (selected == "Handwriting") {
             columnName = "HandwritingInput";
             selected = 1;
-            updateSettings("KeyboardInput", 0);
+            updateSettings("KeyboardInput", 0, false);
         } else if (selected == "Medium") {
             columnName = "TextSize";
             selected = 0;
@@ -72,7 +72,7 @@ function myFunction() {
             columnName = "TextSize";
             selected = 2;
         }
-        updateSettings(columnName, selected);
+        updateSettings(columnName, selected, true);
     });
 }
 
@@ -122,37 +122,37 @@ function populateSuccess(data) {
 
 function remindersButtonFunction() {
     if ($("#addReminders").hasClass('active')) {
-        updateSettings('CreateReminderButton', 1);
+        updateSettings('CreateReminderButton', 1, true);
     } else {
-        updateSettings('CreateReminderButton', 0);
+        updateSettings('CreateReminderButton', 0, true);
     }
 }
 
 function callButtonFunction() {
     if ($("#addCall").hasClass('active')) {
-        updateSettings('CallButton', 1);
+        updateSettings('CallButton', 1, true);
     } else {
-        updateSettings('CallButton', 0);
+        updateSettings('CallButton', 0, true);
     }
 }
 
 function sosButtonFunction() {
     if ($("#addSOS").hasClass('active')) {
-        updateSettings('CreateReminderButton', 1);
+        updateSettings('CreateReminderButton', 1, true);
     } else {
-        updateSettings('CreateReminderButton', 0);
+        updateSettings('CreateReminderButton', 0, true);
     }
 }
 
 function scrollingArrowsFunction() {
     if ($("#addArrows").hasClass('active')) {
-        updateSettings('ScrollingArrows', 1);
+        updateSettings('ScrollingArrows', 1, true);
     } else {
-        updateSettings('ScrollingArrows', 0);
+        updateSettings('ScrollingArrows', 0, true);
     }
 }
 
-function updateSettings(columnName, value) {
+function updateSettings(columnName, value, shouldFirebase) {
     var url = "http://ericchee.com/neverforgotten/updatePatientSettings.php";
 
     $.ajax(url, {
@@ -164,7 +164,10 @@ function updateSettings(columnName, value) {
         },
         success : function(data){
             updateSuccess(data);
-            firebaseSettings(columnName, value);
+
+            if (shouldFirebase){
+                firebaseSettings(columnName, value);
+            }
         },
         error : ajaxError
     });
