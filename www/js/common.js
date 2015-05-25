@@ -117,10 +117,3 @@ function getMonthNum(monthString) {
 function daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
 }
-
-function ajaxError( xhr, status, errorThrown ) {
-    alert(errorThrown);
-    console.log( "Error: " + errorThrown );
-    console.log( "Status: " + status );
-    console.dir( xhr );
-}

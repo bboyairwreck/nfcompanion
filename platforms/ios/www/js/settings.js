@@ -1,46 +1,47 @@
 var patientID = localStorage.getItem("patient");
 
-$(document).ready(function() {
-    myFunction();
-    populateSettings();
-    document.querySelector("#addReminders").addEventListener('toggle', remindersButtonFunction);
-    document.querySelector("#addCall").addEventListener('toggle', callButtonFunction);
-    document.querySelector("#addSOS").addEventListener('toggle', sosButtonFunction);
-    document.querySelector("#addArrows").addEventListener('toggle', scrollingArrowsFunction);
+!(function() {
+    $(document).ready(function () {
+        myFunction();
+        populateSettings();
+        document.querySelector("#addReminders").addEventListener('toggle', remindersButtonFunction);
+        document.querySelector("#addCall").addEventListener('toggle', callButtonFunction);
+        document.querySelector("#addSOS").addEventListener('toggle', sosButtonFunction);
+        document.querySelector("#addArrows").addEventListener('toggle', scrollingArrowsFunction);
+    });
+    function myFunction() {
+        $('h1').text("Settings");
+
+        $("#welcomeTime").change(function () {
+
+            var time = $("#welcomeTime").val();
+
+            var timeString;
+            if (time) {
+                var arrTime = time.split(":");
+
+                var hours = arrTime[0];
+                var mins = arrTime[1];
+                var AMorPM = " AM";
+                if (hours >= 12) {
+                    AMorPM = " PM";
+                }
+
+                hours = hours % 12;
+                if (hours == 0) {
+        hours = 12;
+    }
+
+    timeString = hours + ":" + mins + AMorPM;
+} else {
+    $("#welcomeTime").val("00:00");
+    timeString = "12:00 AM";
+}
+
+$('#welcomeTimeString').text(timeString);
 });
 
-function myFunction() {
-    $('h1').text("Settings");
-
-    $("#welcomeTime").change(function() {
-
-        var time = $("#welcomeTime").val();
-
-        var timeString;
-        if (time) {
-            var arrTime = time.split(":");
-
-            var hours = arrTime[0];
-            var mins = arrTime[1];
-            var AMorPM = " AM";
-            if (hours >= 12) {
-                AMorPM = " PM";
-            }
-
-            hours = hours % 12;
-            if (hours == 0) {
-                hours = 12;
-            }
-
-            timeString = hours + ":" + mins + AMorPM;
-        } else {
-            $("#welcomeTime").val("00:00");
-            timeString = "12:00 AM";
-        }
-
-        $('#welcomeTimeString').text(timeString);
-    });
-
+<<<<<<< HEAD
     $("select.optionClass").change(function() {
         var selected = $(this).children(":selected").text();
         $(this).prev().children(":first").text(selected);
@@ -74,18 +75,53 @@ function myFunction() {
         }
         updateSettings(columnName, selected, true);
     });
+=======
+$("select.optionClass").change(function () {
+    var selected = $(this).children(":selected").text();
+    $(this).prev().children(":first").text(selected);
+    //var columnName = $(this).parent().prev().text();
+    var columnName;
+    if (selected == "Calendar") {
+        columnName = "CalendarLayout";
+        selected = 1;
+        updateSettings("ListLayout", 0);
+    } else if (selected == "List") {
+        columnName = "ListLayout";
+        selected = 1;
+        updateSettings("CalendarLayout", 0);
+    } else if (selected == "Keyboard") {
+        columnName = "KeyboardInput";
+        selected = 1;
+        updateSettings("HandwritingInput", 0);
+    } else if (selected == "Handwriting") {
+        columnName = "HandwritingInput";
+        selected = 1;
+        updateSettings("KeyboardInput", 0);
+    } else if (selected == "Medium") {
+        columnName = "TextSize";
+        selected = 0;
+    } else if (selected == "Large") {
+        columnName = "TextSize";
+        selected = 1;
+    } else if (selected == "X-Large") {
+        columnName = "TextSize";
+        selected = 2;
+    }
+    updateSettings(columnName, selected);
+});
+>>>>>>> code clean up
 }
 
 function populateSettings() {
     var url = "http://ericchee.com/neverforgotten/getSettings_Patient.php";
 
     $.ajax(url, {
-        dataType : "json",
-        data : {
-            'n' : patientID
+        dataType: "json",
+        data: {
+            'n': patientID
         },
-        success : populateSuccess,
-        error : ajaxError
+        success: populateSuccess,
+        error: ajaxError
     });
 }
 
@@ -156,11 +192,11 @@ function updateSettings(columnName, value, shouldFirebase) {
     var url = "http://ericchee.com/neverforgotten/updatePatientSettings.php";
 
     $.ajax(url, {
-        dataType : "json",
-        data : {
-            'n' : patientID,
-            'col' : columnName,
-            'val' : value
+        dataType: "json",
+        data: {
+            'n': patientID,
+            'col': columnName,
+            'val': value
         },
         success : function(data){
             updateSuccess(data);
@@ -175,10 +211,17 @@ function updateSettings(columnName, value, shouldFirebase) {
 
 function updateSuccess(data) {
     if (data["message"] == "success") {
-        //alert("Settings updated!");
+        alert("Settings updated!");
     } else {
         alert("Error: Settings was NOT updated");
     }
+}
+
+function ajaxError(xhr, status, errorThrown) {
+    alert(errorThrown);
+    console.log("Error: " + errorThrown);
+    console.log("Status: " + status);
+    console.dir(xhr);
 }
 
 function firebaseSettings(columnName, value) {
@@ -193,3 +236,4 @@ function firebaseSettings(columnName, value) {
     patientFire.set(value);
 }
 
+}());
