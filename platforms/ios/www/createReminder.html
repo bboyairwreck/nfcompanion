@@ -29,83 +29,181 @@
         <!-- This is the navigator header -->
         <header class="bar bar-nav">
             <a href="reminders.html">
-                <button class="btn btn-negative btn-nav pull-left backHome">Cancel</button>
+                <button class="btn btn-link btn-nav pull-left backHome">
+                    <span class="icon icon-left-nav"></span>
+                    Cancel
+                </button>
+            </a>
 
-                <!--<button class="btn btn-link btn-nav pull-left backHome">-->
-                    <!--<span class="icon icon-close"></span>-->
-                    <!--Cancel-->
-                <!--</button>-->
-            </a>
+            <h1 class="title">New Reminder</h1>
             <a href="#" id="doneCreateReminder">
-                <button class="btn btn-positive btn-nav pull-right">Done</button>
+                <button class="btn btn-link btn-nav pull-right">
+                    Create
+                </button>
             </a>
-            <h1 class="title">Create a Reminder</h1>
 
         </header>
 
         <!-- This is were the content of your app goes -->
         <div class="content" id="createReminder">
-            <div class="card">
-                <ul class="table-view">
-                    <li class="table-view-cell table-view-divider">Reminder</li>
-                </ul>
-                <form class="input-group">
-                    <div class="input-row">
-                        <label>Name</label>
-                        <input type="text" name="reminderTitle" placeholder="Title" />
-                    </div>
-                    <div class="input-row">
-                        <label>Date</label>
-                        <input type="date" name="reminderDate" />
-                    </div>
-                    <div class="input-row">
-                        <label>Time</label>
-                        <input type="time" name="reminderDateTime" value="09:00 AM" />
-                    </div>
-                    <div class="input-row">
-                        <label>Repeat</label>
-                        <label class="repeatLabel">
-                            <span class="repeatString repeatText">Never</span>
-                            <select class="light selectRepeat repeat" style="display: inline-block; width: 10px; height: 1em; margin: 0px;">
-                                <option>Weekly</option>
-                                <option>Daily</option>
-                                <option selected>Never</option>
-                                <option>Monthly</option>
-                            </select>
+            <ul class="table-view" id="nameAndDateTime">
+                <input type="text" id="remName" placeholder="Reminder Name">
+                <!--<li class="table-view">-->
+                    <!--<input type="text" id="remName" placeholder="Reminder Name">-->
+                <!--</li>-->
+                <!--<li class="table-view" id="addDateTime">-->
+                <div id="dateTime">
+                    <div class="remDateTime" id="remDateWrap">
+                        <label id="remDateTitle" class="remTitle">Date</label>
+                        <label id="remDateLabel">
+                            <span id="remDateString">May 26th, 2015</span>
+                            <input id="remDate" class="optionClass" type="date" />
                         </label>
                     </div>
-                    <div class="input-row">
-                        <label>Reminder</label>
-                        <label class="repeatLabel">
-                            <span class="repeatString notifications">0 minutes</span>
-                            <select class="light selectRepeat selectNot">
-                                <option selected>0 minutes</option>
-                                <option>5 minutes</option>
-                                <option>10 minutes</option>
-                                <option>15 minutes</option>
-                                <option>30 minutes</option>
-                                <option>45 minutes</option>
-                                <option>1 hour</option>
-                                <option>2 hours</option>
-                                <option>5 hours</option>
-                                <option>10 hours</option>
-                                <option>24 hours</option>
-                                <option>2 days</option>
-                                <option>1 week</option>
-                                <option>15 weeks</option>
-                            </select>
+                    <div class="remDateTime" id="remTimeWrap">
+                        <label id="remTimeTitle" class="remTitle">Time</label>
+                        <!--<input type="time" id="remTime">-->
+                        <label id="remTimeLabel">
+                            <span id="remTimeString">9:00 AM</span>
+                            <input id="remTime" class="optionClass" type="time" value="09:00" />
                         </label>
                     </div>
-                </form>
-            </div>
-            <div class="card">
-                <ul class="table-view">
-                    <li class="table-view-cell table-view-divider">Notes</li>
-                </ul>
-                <form class="input-group">
-                    <textarea rows="5" placeholder="Add a note"></textarea>
-                </form>
-            </div>
+                </div>
+
+                <!--</li>-->
+            </ul>
+
+            <ul class="table-view">
+                <li class="table-view-cell">
+                    <label class="columnName">Repeat</label>
+                    <label>
+                        <a class="navigate-right">
+                            <span id="remRepeatOption" class="optionDisplay">None</span>
+                        </a>
+                        <select class="light selectRepeat repeat optionClass" id="remRepeatSelect">
+                            <option value="None" selected>None</option>
+                            <option value="Daily">Daily</option>
+                            <option value="Weekly">Weekly</option>
+                            <option value="Monthly">Monthly</option>
+                        </select>
+                    </label>
+                </li>
+            </ul>
+
+            <ul class="table-view" id="alerts">
+                <li class="table-view-divider">ALERTS</li>
+            </ul>
+
+
+
+
+
+
+
+
+
+
+            <!--<ul class="table-view">-->
+                <!--<li class="table-view-divider">LAYOUT</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--<label class="columnName">Reminder View</label>-->
+                    <!--<label>-->
+                        <!--<a class="navigate-right">-->
+                            <!--<span id="viewOption" class="optionDisplay"></span>-->
+                        <!--</a>-->
+                        <!--<select class="light selectRepeat repeat optionClass" id="selectView">-->
+                            <!--<option value="Calendar">Calendar</option>-->
+                            <!--<option value="List">List</option>-->
+                        <!--</select>-->
+                    <!--</label>-->
+                <!--</li>-->
+                <!--<li class="table-view-divider">BUTTONS</li>-->
+                <!--<li class="table-view-cell">-->
+                    <!--SOS-->
+                    <!--<div class="toggle" id="addSOS">-->
+                        <!--<div class="toggle-handle"></div>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="table-view-divider">SOUND</li>-->
+                <!--<li class="table-view-cell" id="addTime">-->
+                    <!--Greeting Time-->
+                    <!--<label id="welcomeTimeLabel">-->
+                        <!--<span id="welcomeTimeString">9:00 AM</span><span class="icon icon-edit"></span>-->
+                        <!--<input id="welcomeTime" class="optionClass" type="time" value="09:00" />-->
+                    <!--</label>-->
+                <!--</li>-->
+            <!--</ul>-->
+
+
+
+            <!--<form class="input-group">-->
+                <!--<input type="text" placeholder="Reminder Name">-->
+            <!--</form>-->
+
+
+
+
+            <!--<div class="card">-->
+                <!--<ul class="table-view">-->
+                    <!--<li class="table-view-cell table-view-divider">Reminder</li>-->
+                <!--</ul>-->
+                <!--<form class="input-group">-->
+                    <!--<div class="input-row">-->
+                        <!--<label>Name</label>-->
+                        <!--<input type="text" name="reminderTitle" placeholder="Title" />-->
+                    <!--</div>-->
+                    <!--<div class="input-row">-->
+                        <!--<label>Date</label>-->
+                        <!--<input type="date" name="reminderDate" />-->
+                    <!--</div>-->
+                    <!--<div class="input-row">-->
+                        <!--<label>Time</label>-->
+                        <!--<input type="time" name="reminderDateTime" value="09:00 AM" />-->
+                    <!--</div>-->
+                    <!--<div class="input-row">-->
+                        <!--<label>Repeat</label>-->
+                        <!--<label class="repeatLabel">-->
+                            <!--<span class="repeatString repeatText">Never</span>-->
+                            <!--<select class="light selectRepeat repeat" style="display: inline-block; width: 10px; height: 1em; margin: 0px;">-->
+                                <!--<option>Weekly</option>-->
+                                <!--<option>Daily</option>-->
+                                <!--<option selected>Never</option>-->
+                                <!--<option>Monthly</option>-->
+                            <!--</select>-->
+                        <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="input-row">-->
+                        <!--<label>Reminder</label>-->
+                        <!--<label class="repeatLabel">-->
+                            <!--<span class="repeatString notifications">0 minutes</span>-->
+                            <!--<select class="light selectRepeat selectNot">-->
+                                <!--<option selected>0 minutes</option>-->
+                                <!--<option>5 minutes</option>-->
+                                <!--<option>10 minutes</option>-->
+                                <!--<option>15 minutes</option>-->
+                                <!--<option>30 minutes</option>-->
+                                <!--<option>45 minutes</option>-->
+                                <!--<option>1 hour</option>-->
+                                <!--<option>2 hours</option>-->
+                                <!--<option>5 hours</option>-->
+                                <!--<option>10 hours</option>-->
+                                <!--<option>24 hours</option>-->
+                                <!--<option>2 days</option>-->
+                                <!--<option>1 week</option>-->
+                                <!--<option>15 weeks</option>-->
+                            <!--</select>-->
+                        <!--</label>-->
+                    <!--</div>-->
+                <!--</form>-->
+            <!--</div>-->
+            <!--<div class="card">-->
+                <!--<ul class="table-view">-->
+                    <!--<li class="table-view-cell table-view-divider">Notes</li>-->
+                <!--</ul>-->
+                <!--<form class="input-group">-->
+                    <!--<textarea rows="5" placeholder="Add a note"></textarea>-->
+                <!--</form>-->
+            <!--</div>-->
         </div>
     </body>
 </html>

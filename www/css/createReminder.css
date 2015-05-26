@@ -1,3 +1,103 @@
+/*#addDateTime {*/
+    /*display: block;*/
+/*}*/
+
+#dateTime {
+    width: 100%;
+    display: block;
+}
+
+#remName {
+    height: 65px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.remTitle {
+    /*clear: right;*/
+    display: block;
+    color: grey;
+    font-size: 10pt;
+    width: 100%;
+}
+
+/*#remDateLabel {*/
+    /*clear: left;*/
+/*}*/
+
+.remDateTime {
+    width: 50%;
+    padding: 15px;
+    height: 75px;
+    /*float: left;*/
+    /*overflow: hidden;*/
+}
+
+#remDateWrap {
+    float: left;
+    border-right: grey solid 1px;
+}
+
+
+
+#remTimeWrap {
+    overflow: hidden;
+    /*position: relative;*/
+}
+
+/* Invisible time input*/
+#remDate {
+    opacity: 0;
+    color:rgba(255,255,255, 0);
+    left: 15px;
+    top: 50%;
+    position: absolute;
+    width: 7em;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: none;
+    border: 1px solid #000000;
+    display: block;
+}
+
+#remTime {
+    opacity: 0;
+    color:rgba(255,255,255, 0);
+    right: 15px;
+    top: 50%;
+    position: absolute;
+    width: 7em;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: none;
+    border: 1px solid #000000;
+    display: block;
+}
+
+.optionClass {
+    opacity: 0;
+    color:rgba(255,255,255, 0);
+    right: 0px;
+    top: 50%;
+    position: absolute;
+    width: 7em;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: none;
+    border: 1px solid #000000;
+    display: block;
+}
+
+.optionDisplay {
+    right: 35px;
+    position: absolute;
+    display: inline-block;
+}
+
+
 .selectRepeat {
     opacity: 0;
     color:rgba(255,255,255, 0);
@@ -33,3 +133,4 @@
 input {
     color: grey;
 }
+
