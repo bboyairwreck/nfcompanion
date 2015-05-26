@@ -1,13 +1,17 @@
+#calAndTasks {
+    height: 60%;
+}
+
 td {
     text-align: center;
     vertical-align: middle;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 #cal td {
     width: 14%;
-    font-weight: bold;
+    /*font-weight: bold;*/
     /*border-top: grey solid 1px;*/
     /*border-bottom: grey solid 1px;*/
 }
@@ -17,6 +21,7 @@ th {
     height: 10px;
     text-align: center;
     font-weight: normal;
+    font-size: 8pt;
 }
 
 tr {
@@ -56,6 +61,11 @@ tr {
     color: #C45249;
     text-decoration-color: lightgrey;
     /*border: black solid 1px;*/
+}
+
+#taskTableWrap {
+    height: calc(100% - 150px);
+    overflow: scroll;
 }
 
 .noTask {

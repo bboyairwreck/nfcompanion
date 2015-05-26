@@ -39,19 +39,25 @@
     <ul class="table-view" id="calTitle">
         <li class="table-view-divider" id="monthYear"></li>
     </ul>
-    <table id="cal" style="width:100%">
-        <tr class="calHeader">
-            <th>S</th>
-            <th>M</th>
-            <th>T</th>
-            <th>W</th>
-            <th>T</th>
-            <th>F</th>
-            <th>S</th>`
-        </tr>
-    </table>
-    <table id="taskTable" style="width:100%">
-    </table>
+    <div id="calAndTasks">
+        <div id="calWrap">
+            <table id="cal" style="width:100%">
+                <tr class="calHeader">
+                    <th>S</th>
+                    <th>M</th>
+                    <th>T</th>
+                    <th>W</th>
+                    <th>T</th>
+                    <th>F</th>
+                    <th>S</th>
+                </tr>
+            </table>
+        </div>
+
+        <div id="taskTableWrap">
+            <table id="taskTable" style="width:100%"></table>
+        </div>
+    </div>
 
     <table id="taskTemplate" style="display: none;">
         <tr class="taskCard">
