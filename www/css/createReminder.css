@@ -134,3 +134,6 @@ input {
     color: grey;
 }
 
+#doneCreateReminder {
+    right: 10px;
+}
