@@ -1,10 +1,9 @@
-var patientID = localStorage.getItem("patient");
-
 !(function(){
     $(document).ready(function() {
         var myParams = getParams();
 
         var eventID = myParams["eventID"];
+        var patientID = localStorage.getItem("patient");
 
         var url = "http://ericchee.com/neverforgotten/getReminders_Event.php";
         $.ajax(url, {
@@ -19,6 +18,7 @@ var patientID = localStorage.getItem("patient");
     });
 
     function ajaxSuccess(data) {
+        alert("successful ajax call!");
         $("#alerts").empty();
         if (data.length > 0) {
             for (var i = 0; i < data.length; i++){
@@ -45,5 +45,12 @@ var patientID = localStorage.getItem("patient");
                 $("#alerts").prepend($newReminder);
             }
         }
+    }
+
+    function ajaxError( xhr, status, errorThrown ) {
+        alert(errorThrown);
+        console.log( "Error: " + errorThrown );
+        console.log( "Status: " + status );
+        console.dir( xhr );
     }
 }());
